@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 32px -4px rgba(26, 28, 28, 0.06);
+  height: 80px;
+}
+
+.navbar--checkout {
+  position: absolute;
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.navbar__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.navbar__logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-img {
+  max-height: 48px;
+  width: auto;
+}
+
+.navbar__logo-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-green);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  overflow-x: auto;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .navbar__links {
+    gap: 32px;
+  }
+}
+
+.navbar__link {
+  color: var(--color-brown);
+  transition: color var(--transition-fast);
+  padding: 4px 0;
+}
+
+.navbar__link:hover {
+  color: var(--color-green);
+}
+
+.navbar__link--active {
+  color: var(--color-green);
+  border-bottom: 2px solid var(--color-green);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__cart-btn {
+  background: none;
+  border: none;
+  color: var(--color-green);
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.navbar__cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.navbar__cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-green);
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.navbar__back-btn:hover {
+  transform: scale(1.05);
+}

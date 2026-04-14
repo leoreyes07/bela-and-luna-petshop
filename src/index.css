@@ -1,0 +1,142 @@
+/* Design System: Bela & Luna Petshop */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600&family=Dancing+Script:wght@700&display=swap');
+
+:root {
+  /* Main Colors */
+  --color-white: #FFFFFF;
+  --color-green: #00CC99;
+  --color-green-rgb: 0, 204, 153;
+  --color-pink: #E2006E;
+  --color-pink-rgb: 226, 0, 110;
+  --color-brown: #790438;
+  --color-brown-rgb: 121, 4, 56;
+
+  /* Secondary Colors */
+  --color-purple: #8C52FF;
+  --color-purple-rgb: 140, 82, 255;
+  --color-yellow: #FFEE88;
+  --color-yellow-rgb: 255, 238, 136;
+  --color-light-blue: #00C2CB;
+  --color-light-blue-rgb: 0, 194, 203;
+
+  /* Typography */
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, ul, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--font-body);
+  color: var(--color-brown);
+  background-color: var(--color-white);
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex-grow: 1;
+}
+
+/* Base Components (BEM Patterns) */
+
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  border: none;
+}
+
+.button--primary {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.button--secondary {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Layout Blocks */
+
+.section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.section--alt {
+  background-color: #F8F8F8;
+}
+
+/* Paw Print Animation */
+.paw-print {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation: pawFade 2s forwards;
+  z-index: 99;
+}
+
+@keyframes pawFade {
+  0% { opacity: 0.8; transform: scale(0.6); }
+  100% { opacity: 0; transform: scale(1.5); }
+}

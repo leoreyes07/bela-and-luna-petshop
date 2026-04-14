@@ -1,0 +1,50 @@
+.harnesses {
+  min-height: calc(100vh - 80px);
+  background-color: var(--color-white);
+  padding-bottom: var(--spacing-xxl);
+}
+
+.harnesses-hero {
+  background-color: #F9FAFB;
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: var(--spacing-xl);
+}
+
+.harnesses-hero__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.harnesses-hero__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(var(--color-purple-rgb), 0.1);
+  color: var(--color-purple);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-md);
+}
+
+.harnesses-hero__title {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-brown);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+.harnesses-hero__text {
+  font-size: 1.125rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+.harnesses-gallery {
+  padding-bottom: var(--spacing-xxl);
+}
