@@ -5,11 +5,33 @@
 }
 
 .harnesses-hero {
-  background-color: #F9FAFB;
+  background: linear-gradient(135deg, #E0F2F1 0%, #E8F5E9 50%, #E3F2FD 100%);
   padding: var(--spacing-xl) 0;
   text-align: center;
   border-bottom: 1px solid #E5E7EB;
   margin-bottom: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.harnesses-hero::before {
+  content: '🛡️';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.06;
+  top: -10px;
+  left: 5%;
+  pointer-events: none;
+}
+
+.harnesses-hero::after {
+  content: '🐕';
+  position: absolute;
+  font-size: 7rem;
+  opacity: 0.06;
+  bottom: -10px;
+  right: 5%;
+  pointer-events: none;
 }
 
 .harnesses-hero__content {

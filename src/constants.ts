@@ -47,7 +47,7 @@ export const CATEGORIES = [
   { name: 'Collars', icon: 'Zap' },
   { name: 'Beds', icon: 'Bed' },
   { name: 'Bowls', icon: 'Utensils' },
-  { name: 'Toys', icon: 'Gamepad2' },
+  { name: 'Toys', icon: 'TeddyBear' },
   { name: 'Others', icon: 'MoreHorizontal' }
 ];
 
@@ -148,5 +148,34 @@ export const COLLARS: Product[] = [
     image: '/src/assets/products/collars/collar-green-yellow.jpg',
     category: 'Collars',
     tag: 'New'
+  }
+];
+
+export const TOYS: Product[] = [
+  {
+    id: 'toy1',
+    name: 'Sunflower Puzzle Feeder',
+    description: 'Interactive Spinner • Level 1 Enrichment',
+    price: 28,
+    image: '/src/assets/products/toys/toy-puzzle-green.png',
+    category: 'Toys',
+    tag: 'Best Seller'
+  },
+  {
+    id: 'toy2',
+    name: 'Blue Galaxy Puzzle',
+    description: 'Slow Feeder • Anti-Scoff Design',
+    price: 32,
+    image: '/src/assets/products/toys/toy-puzzle-blue.png',
+    category: 'Toys',
+    tag: 'New'
+  },
+  {
+    id: 'toy3',
+    name: 'Red Flower Maze',
+    description: 'Level 2 Challenge • Enrichment Toy',
+    price: 35,
+    image: '/src/assets/products/toys/toy-puzzle-red.png',
+    category: 'Toys'
   }
 ];

@@ -1,0 +1,125 @@
+.toy-card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.toy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.toy-card__image-container {
+  height: 240px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.toy-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.toy-card:hover .toy-card__image {
+  transform: scale(1.06);
+}
+
+/* Tags */
+.toy-card__tag-container {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+}
+
+.toy-card__tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toy-card__tag--best-seller {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.toy-card__tag--new {
+  background-color: #FFEE88;
+  color: #5a4a00;
+}
+
+/* Content */
+.toy-card__content {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.toy-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.toy-card__info {
+  flex: 1;
+}
+
+.toy-card__title {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-brown);
+  margin-bottom: 2px;
+}
+
+.toy-card__desc {
+  font-size: 0.8125rem;
+  color: #6B7280;
+}
+
+.toy-card__price {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-green);
+  white-space: nowrap;
+}
+
+/* Button */
+.toy-card__add-btn {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.toy-card__add-btn--added {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  transform: scale(0.97);
+}

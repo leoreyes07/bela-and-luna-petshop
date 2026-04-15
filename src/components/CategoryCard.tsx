@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Icons from 'lucide-react';
+import TeddyBearIcon from './icons/TeddyBearIcon';
 import './CategoryCard.css';
 
 interface CategoryCardProps {
@@ -8,9 +9,14 @@ interface CategoryCardProps {
   onClick?: () => void;
 }
 
+const CUSTOM_ICONS: Record<string, React.FC<{ size?: number; color?: string }>> = {
+  TeddyBear: TeddyBearIcon,
+};
+
 const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) => {
+  const CustomIcon = CUSTOM_ICONS[iconName];
   // @ts-ignore - Dynamic icon access
-  const Icon = Icons[iconName] || Icons.HelpCircle;
+  const LucideIcon = Icons[iconName] || Icons.HelpCircle;
 
   const getColorData = () => {
     switch (name.toLowerCase()) {
@@ -18,7 +24,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) 
       case 'collars': return 'var(--color-pink-rgb)';
       case 'beds': return 'var(--color-light-blue-rgb)';
       case 'bowls': return 'var(--color-purple-rgb)';
-      case 'toys': return 'var(--color-green-rgb)';
+      case 'toys': return 'var(--color-yellow-rgb, 255, 200, 0)';
       default: return 'var(--color-pink-rgb)';
     }
   };
@@ -35,10 +41,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) 
         className="category-card__icon-container"
         style={{ 
           color: `rgb(${rgbVar})`, 
-          backgroundColor: `rgba(${rgbVar}, 0.2)` 
+          backgroundColor: `rgba(${rgbVar}, 0.18)` 
         }}
       >
-        <Icon size={32} />
+        {CustomIcon
+          ? <CustomIcon size={32} color={`rgb(${rgbVar})`} />
+          : <LucideIcon size={32} />
+        }
       </div>
       <span className="category-card__name">{name}</span>
     </div>

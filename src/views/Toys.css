@@ -1,11 +1,11 @@
-.collars {
+.toys {
   min-height: calc(100vh - 80px);
   background-color: var(--color-white);
   padding-bottom: var(--spacing-xxl);
 }
 
-.collars-hero {
-  background: linear-gradient(135deg, #FCE4EC 0%, #F3E5F5 50%, #E0F2F1 100%);
+.toys-hero {
+  background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 50%, #F0FFF8 100%);
   padding: var(--spacing-xl) 0;
   text-align: center;
   border-bottom: 1px solid #E5E7EB;
@@ -14,8 +14,8 @@
   overflow: hidden;
 }
 
-.collars-hero::before {
-  content: '✨';
+.toys-hero::before {
+  content: '🐾';
   position: absolute;
   font-size: 8rem;
   opacity: 0.06;
@@ -24,8 +24,8 @@
   pointer-events: none;
 }
 
-.collars-hero::after {
-  content: '🎀';
+.toys-hero::after {
+  content: '🧸';
   position: absolute;
   font-size: 7rem;
   opacity: 0.06;
@@ -34,16 +34,17 @@
   pointer-events: none;
 }
 
-.collars-hero__content {
+.toys-hero__content {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.collars-hero__badge {
+.toys-hero__badge {
   display: inline-block;
   padding: 4px 12px;
-  background-color: rgba(0, 204, 153, 0.12);
-  color: var(--color-green);
+  background-color: rgba(255, 238, 136, 0.35);
+  color: #a07800;
+  border: 1px solid rgba(255, 238, 136, 0.6);
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 700;
@@ -52,7 +53,7 @@
   margin-bottom: var(--spacing-md);
 }
 
-.collars-hero__title {
+.toys-hero__title {
   font-family: var(--font-headline);
   font-size: 2.5rem;
   font-weight: 800;
@@ -61,12 +62,12 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.collars-hero__text {
+.toys-hero__text {
   font-size: 1.125rem;
   color: #4B5563;
   line-height: 1.6;
 }
 
-.collars-gallery {
+.toys-gallery {
   padding-bottom: var(--spacing-xxl);
 }

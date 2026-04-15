@@ -8,12 +8,13 @@ interface NavbarProps {
   onBackClick?: () => void;
   onNavigateHarnesses?: () => void;
   onNavigateCollars?: () => void;
+  onNavigateToys?: () => void;
   currentView?: string;
   isCheckout?: boolean;
   cartCount: number;
 }
 
-export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, onNavigateCollars, currentView, isCheckout, cartCount }: NavbarProps) {
+export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, onNavigateCollars, onNavigateToys, currentView, isCheckout, cartCount }: NavbarProps) {
   return (
     <nav className={`navbar ${isCheckout ? 'navbar--checkout' : ''}`}>
       <div className="navbar__container">
@@ -50,7 +51,16 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
               </a>
               <a href="#" className="navbar__link">Beds</a>
               <a href="#" className="navbar__link">Pet Bowls</a>
-              <a href="#" className="navbar__link">Toys</a>
+              <a 
+                href="#" 
+                className={`navbar__link ${currentView === 'toys' ? 'navbar__link--active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigateToys?.();
+                }}
+              >
+                Toys
+              </a>
               <a href="#" className="navbar__link">Others</a>
             </div>
             <div className="navbar__actions">

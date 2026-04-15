@@ -10,11 +10,12 @@ interface HomeProps {
   onCheckout: () => void;
   onNavigateHarnesses: () => void;
   onNavigateCollars: () => void;
+  onNavigateToys: () => void;
   cartCount: number;
   totalPrice: number;
 }
 
-export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onNavigateCollars, cartCount, totalPrice }: HomeProps) {
+export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onNavigateCollars, onNavigateToys, cartCount, totalPrice }: HomeProps) {
   return (
     <main className="home">
       {/* Hero Section */}
@@ -73,6 +74,7 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
                 onClick={
                   cat.name === 'Harnesses' ? onNavigateHarnesses
                   : cat.name === 'Collars' ? onNavigateCollars
+                  : cat.name === 'Toys' ? onNavigateToys
                   : undefined
                 }
               />
