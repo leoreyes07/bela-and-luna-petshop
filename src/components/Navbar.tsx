@@ -9,12 +9,15 @@ interface NavbarProps {
   onNavigateHarnesses?: () => void;
   onNavigateCollars?: () => void;
   onNavigateToys?: () => void;
+  onNavigateBeds?: () => void;
+  onNavigateBowls?: () => void;
+  onNavigateOthers?: () => void;
   currentView?: string;
   isCheckout?: boolean;
   cartCount: number;
 }
 
-export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, onNavigateCollars, onNavigateToys, currentView, isCheckout, cartCount }: NavbarProps) {
+export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, onNavigateCollars, onNavigateToys, onNavigateBeds, onNavigateBowls, onNavigateOthers, currentView, isCheckout, cartCount }: NavbarProps) {
   return (
     <nav className={`navbar ${isCheckout ? 'navbar--checkout' : ''}`}>
       <div className="navbar__container">
@@ -49,8 +52,26 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
               >
                 Collars
               </a>
-              <a href="#" className="navbar__link">Beds</a>
-              <a href="#" className="navbar__link">Pet Bowls</a>
+              <a 
+                href="#" 
+                className={`navbar__link ${currentView === 'beds' ? 'navbar__link--active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigateBeds?.();
+                }}
+              >
+                Beds
+              </a>
+              <a 
+                href="#" 
+                className={`navbar__link ${currentView === 'bowls' ? 'navbar__link--active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigateBowls?.();
+                }}
+              >
+                Pet Bowls
+              </a>
               <a 
                 href="#" 
                 className={`navbar__link ${currentView === 'toys' ? 'navbar__link--active' : ''}`}
@@ -61,7 +82,16 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
               >
                 Toys
               </a>
-              <a href="#" className="navbar__link">Others</a>
+              <a 
+                href="#" 
+                className={`navbar__link ${currentView === 'others' ? 'navbar__link--active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigateOthers?.();
+                }}
+              >
+                Others
+              </a>
             </div>
             <div className="navbar__actions">
               <button 

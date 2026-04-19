@@ -1,6 +1,9 @@
 import React from 'react';
 import * as Icons from 'lucide-react';
 import TeddyBearIcon from './icons/TeddyBearIcon';
+import HarnessIcon from './icons/HarnessIcon';
+import CollarIcon from './icons/CollarIcon';
+import BowlIcon from './icons/BowlIcon';
 import './CategoryCard.css';
 
 interface CategoryCardProps {
@@ -11,6 +14,9 @@ interface CategoryCardProps {
 
 const CUSTOM_ICONS: Record<string, React.FC<{ size?: number; color?: string }>> = {
   TeddyBear: TeddyBearIcon,
+  HarnessIcon: HarnessIcon,
+  CollarIcon: CollarIcon,
+  BowlIcon: BowlIcon,
 };
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) => {
@@ -24,7 +30,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) 
       case 'collars': return 'var(--color-pink-rgb)';
       case 'beds': return 'var(--color-light-blue-rgb)';
       case 'bowls': return 'var(--color-purple-rgb)';
-      case 'toys': return 'var(--color-yellow-rgb, 255, 200, 0)';
+      case 'toys': return 'var(--color-brown-rgb)';
       default: return 'var(--color-pink-rgb)';
     }
   };

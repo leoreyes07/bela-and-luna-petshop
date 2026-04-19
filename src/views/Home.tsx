@@ -11,11 +11,14 @@ interface HomeProps {
   onNavigateHarnesses: () => void;
   onNavigateCollars: () => void;
   onNavigateToys: () => void;
+  onNavigateBeds: () => void;
+  onNavigateBowls: () => void;
+  onNavigateOthers: () => void;
   cartCount: number;
   totalPrice: number;
 }
 
-export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onNavigateCollars, onNavigateToys, cartCount, totalPrice }: HomeProps) {
+export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onNavigateCollars, onNavigateToys, onNavigateBeds, onNavigateBowls, onNavigateOthers, cartCount, totalPrice }: HomeProps) {
   return (
     <main className="home">
       {/* Hero Section */}
@@ -75,6 +78,9 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
                   cat.name === 'Harnesses' ? onNavigateHarnesses
                   : cat.name === 'Collars' ? onNavigateCollars
                   : cat.name === 'Toys' ? onNavigateToys
+                  : cat.name === 'Beds' ? onNavigateBeds
+                  : cat.name === 'Bowls' ? onNavigateBowls
+                  : cat.name === 'Others' ? onNavigateOthers
                   : undefined
                 }
               />
@@ -93,9 +99,25 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
             <button className="filter-chip">Luxe Velvet</button>
           </div>
           <div className="product-grid">
-            {PRODUCTS.map((product) => (
-              <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
-            ))}
+            {PRODUCTS.map((product) => {
+              const handleNavigateToCategory = () => {
+                if (product.category === 'Harnesses') onNavigateHarnesses();
+                else if (product.category === 'Collars') onNavigateCollars();
+                else if (product.category === 'Beds') onNavigateBeds();
+                else if (product.category === 'Toys') onNavigateToys();
+                else if (product.category === 'Bowls') onNavigateBowls();
+                else if (product.category === 'Others') onNavigateOthers();
+              };
+
+              return (
+                <ProductCard 
+                  key={product.id} 
+                  product={product} 
+                  onAddToCart={handleNavigateToCategory} 
+                  onImageClick={handleNavigateToCategory}
+                />
+              );
+            })}
           </div>
         </div>
       </section>

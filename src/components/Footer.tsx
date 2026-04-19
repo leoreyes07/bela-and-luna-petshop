@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
         
         <div className="footer__copyright">
-          © 2024 PetShop Bela & Luna. Curated with love.
+          © 2026 PetShop Bela & Luna. Curated with love.
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@
 
 .toys-hero {
   background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 50%, #F0FFF8 100%);
-  padding: var(--spacing-xl) 0;
+  padding: 80px 0 var(--spacing-xxl);
   text-align: center;
   border-bottom: 1px solid #E5E7EB;
   margin-bottom: var(--spacing-xl);
@@ -41,8 +41,8 @@
 
 .toys-hero__badge {
   display: inline-block;
-  padding: 4px 12px;
-  background-color: rgba(255, 238, 136, 0.35);
+  padding: 6px 16px;
+  background: linear-gradient(135deg, rgba(255, 238, 136, 0.5), rgba(255, 238, 136, 0.25));
   color: #a07800;
   border: 1px solid rgba(255, 238, 136, 0.6);
   border-radius: 9999px;
@@ -50,6 +50,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-md);
 }
 

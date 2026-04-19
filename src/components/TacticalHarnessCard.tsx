@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ShoppingBag } from 'lucide-react';
 import { Product } from '../constants';
+import './ProductCard.css';
 import './TacticalHarnessCard.css';
 
 interface TacticalHarnessCardProps {
@@ -31,7 +32,7 @@ const TacticalHarnessCard: React.FC<TacticalHarnessCardProps> = ({ product, onAd
         />
         {product.tag && (
           <div className="product-card__tag-container">
-            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : 'product-card__tag--new'}`}>
+            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : product.tag === 'New Edition' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
               {product.tag}
             </span>
           </div>

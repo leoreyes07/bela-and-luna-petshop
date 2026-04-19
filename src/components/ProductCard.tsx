@@ -6,12 +6,17 @@ import './ProductCard.css';
 interface ProductCardProps {
   product: Product;
   onAddToCart: (product: Product) => void;
+  onImageClick?: (product: Product) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImageClick }) => {
   return (
     <div className="product-card">
-      <div className="product-card__image-container">
+      <div 
+        className="product-card__image-container"
+        onClick={() => onImageClick && onImageClick(product)}
+        style={{ cursor: onImageClick ? 'pointer' : 'default' }}
+      >
         <img 
           src={product.image} 
           alt={product.name}
@@ -20,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
         />
         {product.tag && (
           <div className="product-card__tag-container">
-            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : 'product-card__tag--new'}`}>
+            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : product.tag === 'New Edition' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
               {product.tag}
             </span>
           </div>

@@ -1,0 +1,122 @@
+.bowl-card {
+  height: 100%;
+}
+
+.bowl-card__content {
+  flex: 1;
+}
+
+.bowl-card__image-container {
+  height: 240px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bowl-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  transition: transform var(--transition-normal);
+}
+
+.bowl-card__image--metal {
+  padding: 0;
+  transform: scale(1.15);
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05));
+}
+
+.bowl-card:hover .bowl-card__image--metal {
+  transform: scale(1.25);
+}
+
+.bowl-card:hover .bowl-card__image {
+  transform: scale(1.05); /* Same as global but explicit */
+}
+
+
+.bowl-card__size-selector {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.bowl-card__title {
+  font-size: 1rem; /* Reduced from 20px to prevent 2-line wraps */
+  line-height: 1.2;
+}
+
+.bowl-card__desc {
+  font-size: 0.8125rem; /* Reduced from 14px */
+}
+
+.bowl-card__size-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-brown);
+}
+
+.bowl-card__size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.bowl-card__size-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  background-color: var(--color-white);
+  color: var(--color-brown);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.bowl-card__size-btn:hover {
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+
+.bowl-card__size-btn--active {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-color: var(--color-green);
+  box-shadow: 0 2px 4px rgba(0, 204, 153, 0.2);
+}
+
+.bowl-card__add-btn {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.bowl-card__add-btn--added {
+  background-color: var(--color-green) !important;
+  color: white !important;
+  border-color: var(--color-green) !important;
+}
+
+.bowl-card__add-btn--pending {
+  background-color: var(--color-pink);
+  color: white;
+  border: 2px solid var(--color-pink);
+  cursor: pointer;
+}
+
+.bowl-card__add-btn--pending:hover {
+  background-color: var(--color-white);
+  color: var(--color-pink);
+}

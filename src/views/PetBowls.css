@@ -1,0 +1,92 @@
+.pet-bowls {
+  min-height: calc(100vh - 80px);
+  background-color: var(--color-white);
+  padding-bottom: var(--spacing-xxl);
+}
+
+.pet-bowls-hero {
+  background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 50%, #BFDBFE 100%);
+  padding: 80px 0 var(--spacing-xxl);
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.pet-bowls-hero::before {
+  content: '🥄';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.05;
+  top: -10px;
+  left: 5%;
+  pointer-events: none;
+}
+
+.pet-bowls-hero::after {
+  content: '🍽️';
+  position: absolute;
+  font-size: 7rem;
+  opacity: 0.05;
+  bottom: -10px;
+  right: 5%;
+  pointer-events: none;
+}
+
+.pet-bowls-hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pet-bowls-hero__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, rgba(140, 82, 255, 0.2), rgba(140, 82, 255, 0.1));
+  color: #6B21A8; /* A darker purple for better readability */
+  border: 1px solid rgba(140, 82, 255, 0.3);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.pet-bowls-hero__title {
+  font-family: var(--font-headline);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-brown);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-md);
+}
+
+.pet-bowls-hero__text {
+  font-size: 1.25rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+.pet-bowls-gallery {
+  padding-bottom: var(--spacing-xxl);
+}
+
+/* Localize 4-column Grid specifically for Pet Bowls */
+.pet-bowls .product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-xxl);
+  width: 100%;
+}
+
+.pet-bowls .product-grid > * {
+  max-width: none !important;
+}
+
+@media (min-width: 1200px) {
+  .pet-bowls .product-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}

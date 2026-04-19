@@ -7,9 +7,12 @@ import PawPrintAnimation from './components/PawPrintAnimation';
 import Harnesses from './views/Harnesses';
 import Collars from './views/Collars';
 import Toys from './views/Toys';
+import Beds from './views/Beds';
+import PetBowls from './views/PetBowls';
+import Others from './views/Others';
 import { Product, CartItemType } from './constants';
 
-type View = 'home' | 'checkout' | 'harnesses' | 'collars' | 'toys';
+type View = 'home' | 'checkout' | 'harnesses' | 'collars' | 'toys' | 'beds' | 'bowls' | 'others';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<View>('home');
@@ -50,6 +53,9 @@ export default function App() {
         onNavigateHarnesses={() => navigate('harnesses')}
         onNavigateCollars={() => navigate('collars')}
         onNavigateToys={() => navigate('toys')}
+        onNavigateBeds={() => navigate('beds')}
+        onNavigateBowls={() => navigate('bowls')}
+        onNavigateOthers={() => navigate('others')}
         currentView={currentView}
         isCheckout={currentView === 'checkout'}
         cartCount={cartCount}
@@ -63,6 +69,9 @@ export default function App() {
             onNavigateHarnesses={() => navigate('harnesses')}
             onNavigateCollars={() => navigate('collars')}
             onNavigateToys={() => navigate('toys')}
+            onNavigateBeds={() => navigate('beds')}
+            onNavigateBowls={() => navigate('bowls')}
+            onNavigateOthers={() => navigate('others')}
             cartCount={cartCount}
             totalPrice={totalPrice}
           />
@@ -82,6 +91,27 @@ export default function App() {
           />
         ) : currentView === 'toys' ? (
           <Toys
+            onAddToCart={handleAddToCart}
+            onCheckout={handleCheckout}
+            cartCount={cartCount}
+            totalPrice={totalPrice}
+          />
+        ) : currentView === 'beds' ? (
+          <Beds
+            onAddToCart={handleAddToCart}
+            onCheckout={handleCheckout}
+            cartCount={cartCount}
+            totalPrice={totalPrice}
+          />
+        ) : currentView === 'bowls' ? (
+          <PetBowls
+            onAddToCart={handleAddToCart}
+            onCheckout={handleCheckout}
+            cartCount={cartCount}
+            totalPrice={totalPrice}
+          />
+        ) : currentView === 'others' ? (
+          <Others
             onAddToCart={handleAddToCart}
             onCheckout={handleCheckout}
             cartCount={cartCount}

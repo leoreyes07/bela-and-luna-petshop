@@ -15,38 +15,39 @@ export interface CartItemType {
 
 export const PRODUCTS: Product[] = [
   {
-    id: '1',
-    name: 'The Luna Harness',
-    description: 'Midnight Teal • Italian Leather',
-    price: 85,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDozI1cLNIbNKgvvoLLPzDrp2HFF9xZwppw6Oq-7FDe8-wt7jf7SeQL5HvaMOLYcKKvKgvnuDfd1mJ16b-k-MXTpjZuDi9z1PapeyiOIF74IOfDWQQlOpp29ddiDx_zWQaf106goMgEYYVa3lzWAzNDkOPz5_eiP55rXU_ZV56WPzkRhZSFC1Wi6WKsLNCKZ8f7j1KIj5ZeAtdSqdaMA3XO4__Obl2olGmaufsXDkLs8728JAefZ-jl8mNHwdCUrPTHgkGTpDHIew',
+    id: 'th1',
+    name: 'Stealth Black Harness',
+    description: 'Service K-9 • Security Unit',
+    price: 115,
+    image: '/src/assets/products/harnesses/harness-black.png',
     category: 'Harnesses',
     tag: 'Best Seller'
   },
   {
-    id: '2',
-    name: 'Royal Velvet Collar',
-    description: 'Ruby Red • Brass Hardware',
-    price: 45,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3BKxKxJpJJsTh8R1pNnaUBSO1X-oswNWwH1RH8oAESbASYtkWU3CFbkr02Ie6949iVQqPv1brvAhLwPgokfmrYaycvj0dHo9BqXHR7_tZEhfdT5xgbJh09pTqqyXpHzpZ8g0bGAqGSqJvKx34qauG0hLWHmPIXHcS6dUyc2cQkFjcVvdUGWmAhybAuR5QDVPQyItsxaxwVaLUQxCEvjSvFBIoU1jU3QXxAORI1KRgIMrduiZMClzE9bVc9XWIfo-DR9nsV8c1SQ',
-    category: 'Collars'
+    id: 'col2',
+    name: 'Aztec Orange Collar',
+    description: 'Aztec Pattern • Orange & Teal',
+    price: 38,
+    image: '/src/assets/products/collars/collar-aztec-orange.jpg',
+    category: 'Collars',
+    tag: 'Most Popular'
   },
   {
-    id: '3',
-    name: 'Cloud Nine Bed',
-    description: 'Bouclé Cream • Orthopedic',
-    price: 120,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDs_LGPrT3VD88gvNnPFHOisdqlKcG-MyhY8WJ9S8Tu4H0KK2B5Z8BGujm-FhTGgeGte1_jX0AjfTcHyWK2bFExfWPidjN0yRyz4pLZM50619ZAvusNAkzrK5T5tgYxQCkrX6lh_jV1NiYEZqmUMvK9_qfjEhhk9i6r0MsSHWLtYW2wndLEmIkBOZxtyMb8GXzcpaUzmvRvur0D431QBekBK6g0M6bb5oiHRNFjMSwgIWgkX-px9ZN3AtoRY5QW1k_FBI-E0S_xtw',
+    id: 'bed6',
+    name: 'Royal Purple Cloud',
+    description: 'Velvet Soft Touch • Extra Padding',
+    price: 65,
+    image: '/src/assets/products/beds/bed-purple.jpg',
     category: 'Beds',
-    tag: 'New Arrival'
+    tag: 'New Edition'
   }
 ];
 
 export const CATEGORIES = [
-  { name: 'Harnesses', icon: 'ShieldCheck' },
-  { name: 'Collars', icon: 'Zap' },
+  { name: 'Harnesses', icon: 'HarnessIcon' },
+  { name: 'Collars', icon: 'CollarIcon' },
   { name: 'Beds', icon: 'Bed' },
-  { name: 'Bowls', icon: 'Utensils' },
+  { name: 'Bowls', icon: 'BowlIcon' },
   { name: 'Toys', icon: 'TeddyBear' },
   { name: 'Others', icon: 'MoreHorizontal' }
 ];
@@ -76,7 +77,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     price: 125,
     image: '/src/assets/products/harnesses/harness-purple.png',
     category: 'Harnesses',
-    tag: 'New'
+    tag: 'Most Popular'
   },
   {
     id: 'th4',
@@ -122,7 +123,7 @@ export const COLLARS: Product[] = [
     price: 38,
     image: '/src/assets/products/collars/collar-aztec-orange.jpg',
     category: 'Collars',
-    tag: 'New'
+    tag: 'Most Popular'
   },
   {
     id: 'col3',
@@ -147,7 +148,16 @@ export const COLLARS: Product[] = [
     price: 36,
     image: '/src/assets/products/collars/collar-green-yellow.jpg',
     category: 'Collars',
-    tag: 'New'
+    tag: 'Most Popular'
+  },
+  {
+    id: 'col6',
+    name: 'Purple Aztec Collar',
+    description: 'Aztec Pattern • Purple & Vibrant',
+    price: 38,
+    image: '/src/assets/products/collars/collar-purple-aztec.png',
+    category: 'Collars',
+    tag: 'New Edition'
   }
 ];
 
@@ -168,7 +178,7 @@ export const TOYS: Product[] = [
     price: 32,
     image: '/src/assets/products/toys/toy-puzzle-blue.png',
     category: 'Toys',
-    tag: 'New'
+    tag: 'Most Popular'
   },
   {
     id: 'toy3',
@@ -177,5 +187,151 @@ export const TOYS: Product[] = [
     price: 35,
     image: '/src/assets/products/toys/toy-puzzle-red.png',
     category: 'Toys'
+  }
+];
+
+export const BEDS: Product[] = [
+  {
+    id: 'bed1',
+    name: 'Lime Paradise Bed',
+    description: 'Washable Cushion • Ultra-Soft Plush',
+    price: 49,
+    image: '/src/assets/products/beds/bed-lime.jpg',
+    category: 'Beds',
+    tag: 'Trending'
+  },
+  {
+    id: 'bed2',
+    name: 'Crimson Comfort Bed',
+    description: 'Orthopedic Foam • Durable Cover',
+    price: 55,
+    image: '/src/assets/products/beds/bed-red.jpg',
+    category: 'Beds',
+    tag: 'Best Seller'
+  },
+  {
+    id: 'bed3',
+    name: 'Bubblegum Dream Bed',
+    description: 'Breathable Fabric • Removable Cover',
+    price: 52,
+    image: '/src/assets/products/beds/bed-pink.jpg',
+    category: 'Beds'
+  },
+  {
+    id: 'bed4',
+    name: 'Deep Sea Sanctuary',
+    description: 'Premium Fleece • Anti-Slip Bottom',
+    price: 58,
+    image: '/src/assets/products/beds/bed-blue.jpg',
+    category: 'Beds',
+    tag: 'Premium'
+  },
+  {
+    id: 'bed5',
+    name: 'Morning Sky Blue Bed',
+    description: 'Cooling Gel Fiber • Summer Comfort',
+    price: 54,
+    image: '/src/assets/products/beds/bed-lightblue.jpg',
+    category: 'Beds'
+  },
+  {
+    id: 'bed6',
+    name: 'Royal Purple Cloud',
+    description: 'Velvet Soft Touch • Extra Padding',
+    price: 65,
+    image: '/src/assets/products/beds/bed-purple.jpg',
+    category: 'Beds',
+    tag: 'New Edition'
+  }
+];
+
+export const BOWLS: Product[] = [
+  {
+    id: 'bowl1',
+    name: 'Serein Ceramic - Sage',
+    description: 'Hand-glazed matte finish • Hypoallergenic ceramic',
+    price: 42,
+    image: '/src/assets/products/bowls/bowl-green.png',
+    category: 'Bowls',
+    tag: 'Trending'
+  },
+  {
+    id: 'bowl2',
+    name: 'Serein Ceramic - Cream',
+    description: 'Minimalist stoneware • Dishwasher safe',
+    price: 42,
+    image: '/src/assets/products/bowls/bowl-beige.png',
+    category: 'Bowls'
+  },
+  {
+    id: 'bowl3',
+    name: 'Serein Ceramic - Rose',
+    description: 'Premium weighted clay • Anti-spill design',
+    price: 42,
+    image: '/src/assets/products/bowls/bowl-pink.png',
+    category: 'Bowls',
+    tag: 'Best Seller'
+  },
+  {
+    id: 'bowl4',
+    name: 'Serein Ceramic - Sky',
+    description: 'Ethereal blue glaze • Scratch resistant',
+    price: 42,
+    image: '/src/assets/products/bowls/bowl-blue.png',
+    category: 'Bowls'
+  },
+  {
+    id: 'bowl5',
+    name: 'Atlas Stainless - Cobalt',
+    description: 'Double-walled insulated steel • Mirror finish',
+    price: 35,
+    image: '/src/assets/products/bowls/bowl-metal-blue.png',
+    category: 'Bowls',
+    tag: 'Durable'
+  },
+  {
+    id: 'bowl6',
+    name: 'Atlas Stainless - Ruby',
+    description: 'Non-slip rubber base • High-gloss lacquer',
+    price: 35,
+    image: '/src/assets/products/bowls/bowl-metal-red.png',
+    category: 'Bowls'
+  },
+  {
+    id: 'bowl7',
+    name: 'Atlas Stainless - Sunset',
+    description: 'BPA-free powder coating • Adventure ready',
+    price: 35,
+    image: '/src/assets/products/bowls/bowl-metal-orange.png',
+    category: 'Bowls'
+  },
+  {
+    id: 'bowl8',
+    name: 'Atlas Stainless - Blush',
+    description: 'Lightweight & sturdy • Easy to clean',
+    price: 35,
+    image: '/src/assets/products/bowls/bowl-metal-pink.png',
+    category: 'Bowls',
+    tag: 'Most Popular'
+  }
+];
+
+export const OTHERS: Product[] = [
+  {
+    id: 'other1',
+    name: 'Happy Birthday Pink Kit',
+    description: 'Includes bandana, hat, and banner!',
+    price: 25,
+    image: '/src/assets/products/others/hb_kit_pink.png',
+    category: 'Others',
+    tag: 'Trending'
+  },
+  {
+    id: 'other2',
+    name: 'Happy Birthday Blue Kit',
+    description: 'Includes bandana, hat, and banner!',
+    price: 25,
+    image: '/src/assets/products/others/hb_kit_blue.png',
+    category: 'Others'
   }
 ];

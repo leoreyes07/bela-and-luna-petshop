@@ -1,11 +1,11 @@
-.harnesses {
+.beds {
   min-height: calc(100vh - 80px);
   background-color: var(--color-white);
   padding-bottom: var(--spacing-xxl);
 }
 
-.harnesses-hero {
-  background: linear-gradient(135deg, #E0F2F1 0%, #E8F5E9 50%, #E3F2FD 100%);
+.beds-hero {
+  background: linear-gradient(135deg, #FFF9F0 0%, #FAF0E6 50%, #F5F5DC 100%);
   padding: 80px 0 var(--spacing-xxl);
   text-align: center;
   border-bottom: 1px solid #E5E7EB;
@@ -14,8 +14,8 @@
   overflow: hidden;
 }
 
-.harnesses-hero::before {
-  content: '🛡️';
+.beds-hero::before {
+  content: '🛏️';
   position: absolute;
   font-size: 8rem;
   opacity: 0.06;
@@ -24,8 +24,8 @@
   pointer-events: none;
 }
 
-.harnesses-hero::after {
-  content: '🐕';
+.beds-hero::after {
+  content: '☁️';
   position: absolute;
   font-size: 7rem;
   opacity: 0.06;
@@ -34,17 +34,17 @@
   pointer-events: none;
 }
 
-.harnesses-hero__content {
+.beds-hero__content {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.harnesses-hero__badge {
+.beds-hero__badge {
   display: inline-block;
   padding: 6px 16px;
-  background: linear-gradient(135deg, rgba(88, 28, 135, 0.2), rgba(88, 28, 135, 0.1));
-  color: var(--color-purple);
-  border: 1px solid rgba(88, 28, 135, 0.3);
+  background: linear-gradient(135deg, rgba(121, 4, 56, 0.15), rgba(121, 4, 56, 0.08));
+  color: var(--color-brown);
+  border: 1px solid rgba(121, 4, 56, 0.2);
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 700;
@@ -54,7 +54,7 @@
   margin-bottom: var(--spacing-md);
 }
 
-.harnesses-hero__title {
+.beds-hero__title {
   font-family: var(--font-headline);
   font-size: 2.5rem;
   font-weight: 800;
@@ -63,12 +63,13 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.harnesses-hero__text {
+.beds-hero__text {
   font-size: 1.125rem;
   color: #4B5563;
   line-height: 1.6;
 }
 
-.harnesses-gallery {
+.beds-gallery {
   padding-bottom: var(--spacing-xxl);
 }
+
