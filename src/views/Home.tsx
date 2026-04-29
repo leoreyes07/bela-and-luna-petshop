@@ -36,7 +36,7 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
               Thoughtfully designed essentials for your best friend. Because every wag and purr deserves the finest editorial quality.
             </p>
             <div className="hero__actions">
-              <button className="button button--primary hero__btn">
+              <button className="button button--primary hero__btn" onClick={onNavigateHarnesses}>
                 Shop the Collection
                 <ArrowRight size={24} />
               </button>
@@ -94,9 +94,9 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
         <div className="container">
           <div className="product-gallery__filters no-scrollbar">
             <button className="filter-chip filter-chip--active">All Harnesses</button>
-            <button className="filter-chip">Adventure Series</button>
-            <button className="filter-chip">City Walks</button>
-            <button className="filter-chip">Luxe Velvet</button>
+            <button className="filter-chip" onClick={onNavigateHarnesses}>Adventure Series</button>
+            <button className="filter-chip" onClick={onNavigateCollars}>City Walks</button>
+            <button className="filter-chip" onClick={onNavigateBeds}>Luxe Velvet</button>
           </div>
           <div className="product-grid">
             {PRODUCTS.map((product) => {
