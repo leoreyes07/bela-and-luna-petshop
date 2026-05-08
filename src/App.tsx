@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './views/Home';
@@ -15,8 +15,24 @@ import { Product, CartItemType } from './constants';
 type View = 'home' | 'checkout' | 'harnesses' | 'collars' | 'toys' | 'beds' | 'bowls' | 'others';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<View>('home');
+  const [currentView, setCurrentView] = useState<View>(() => {
+    const hash = window.location.hash.replace('#', '') as View;
+    return ['home', 'checkout', 'harnesses', 'collars', 'toys', 'beds', 'bowls', 'others'].includes(hash) ? hash : 'home';
+  });
   const [cart, setCart] = useState<CartItemType[]>([]);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '') as View;
+      if (['home', 'checkout', 'harnesses', 'collars', 'toys', 'beds', 'bowls', 'others'].includes(hash)) {
+        setCurrentView(hash);
+      } else {
+        setCurrentView('home');
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const cartCount = cart.length;
   const totalPrice = useMemo(() => cart.reduce((sum, item) => sum + item.product.price, 0), [cart]);
@@ -30,17 +46,17 @@ export default function App() {
   };
 
   const handleCheckout = () => {
-    setCurrentView('checkout');
+    window.location.hash = 'checkout';
     window.scrollTo(0, 0);
   };
 
   const handleBackToShop = () => {
-    setCurrentView('home');
+    window.location.hash = 'home';
     window.scrollTo(0, 0);
   };
 
   const navigate = (view: View) => {
-    setCurrentView(view);
+    window.location.hash = view;
     window.scrollTo(0, 0);
   };
 

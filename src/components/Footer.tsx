@@ -20,17 +20,17 @@ export default function Footer() {
         </nav>
 
         <div className="footer__social">
-          <div className="footer__icon-circle">
+          <a href="https://www.instagram.com/belaylunapetshop.ni?igsh=MW5sY2oyN3Z5bDNuaA==" target="_blank" rel="noopener noreferrer" className="footer__icon-circle">
             <Instagram size={16} />
-          </div>
-          <div className="footer__icon-circle">
+          </a>
+          <a href="https://www.facebook.com/share/1aSbF4XaCH/" target="_blank" rel="noopener noreferrer" className="footer__icon-circle">
             <Facebook size={16} />
-          </div>
-          <div className="footer__icon-circle">
+          </a>
+          <a href="https://www.tiktok.com/@belaylunapetshop.ni?_r=1&_t=ZS-96CHRDkWQD6" target="_blank" rel="noopener noreferrer" className="footer__icon-circle">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
             </svg>
-          </div>
+          </a>
         </div>
         
         <div className="footer__copyright">

@@ -1,4 +1,5 @@
-import { ShoppingCart, ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
+import { ShoppingCart, ArrowLeft, Menu, X } from 'lucide-react';
 import logo from '../assets/logo.jpg';
 import './Navbar.css';
 
@@ -18,6 +19,10 @@ interface NavbarProps {
 }
 
 export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, onNavigateCollars, onNavigateToys, onNavigateBeds, onNavigateBowls, onNavigateOthers, currentView, isCheckout, cartCount }: NavbarProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className={`navbar ${isCheckout ? 'navbar--checkout' : ''}`}>
       <div className="navbar__container">
@@ -30,14 +35,15 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
         
         {!isCheckout ? (
           <>
-            <div className="navbar__links">
-              <a href="#" className={`navbar__link ${currentView === 'home' ? 'navbar__link--active' : ''}`} onClick={(e) => { e.preventDefault(); onBackClick?.() }}>Home</a>
+            <div className={`navbar__links ${isMenuOpen ? 'navbar__links--open' : ''}`}>
+              <a href="#" className={`navbar__link ${currentView === 'home' ? 'navbar__link--active' : ''}`} onClick={(e) => { e.preventDefault(); onBackClick?.(); closeMenu(); }}>Home</a>
               <a 
                 href="#" 
                 className={`navbar__link ${currentView === 'harnesses' ? 'navbar__link--active' : ''}`}
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigateHarnesses?.();
+                  closeMenu();
                 }}
               >
                 Harnesses
@@ -48,6 +54,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigateCollars?.();
+                  closeMenu();
                 }}
               >
                 Collars
@@ -58,6 +65,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigateBeds?.();
+                  closeMenu();
                 }}
               >
                 Beds
@@ -68,6 +76,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigateBowls?.();
+                  closeMenu();
                 }}
               >
                 Pet Bowls
@@ -78,6 +87,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigateToys?.();
+                  closeMenu();
                 }}
               >
                 Toys
@@ -88,6 +98,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigateOthers?.();
+                  closeMenu();
                 }}
               >
                 Others
@@ -104,6 +115,12 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                     {cartCount}
                   </span>
                 )}
+              </button>
+              <button 
+                className="navbar__menu-btn"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </>
