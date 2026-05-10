@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
     price: 115,
     image: new URL('./assets/products/harnesses/harness-black.png', import.meta.url).href,
     category: 'Harnesses',
-    tag: 'Best Seller'
+    tag: 'Más Vendido'
   },
   {
     id: 'col2',
@@ -30,7 +30,7 @@ export const PRODUCTS: Product[] = [
     price: 38,
     image: new URL('./assets/products/collars/collar-aztec-orange.jpg', import.meta.url).href,
     category: 'Collars',
-    tag: 'Most Popular'
+    tag: 'Más Popular'
   },
   {
     id: 'bed6',
@@ -39,17 +39,17 @@ export const PRODUCTS: Product[] = [
     price: 65,
     image: new URL('./assets/products/beds/bed-purple.jpg', import.meta.url).href,
     category: 'Beds',
-    tag: 'New Edition'
+    tag: 'Nueva Edición'
   }
 ];
 
 export const CATEGORIES = [
-  { name: 'Harnesses', icon: 'HarnessIcon' },
-  { name: 'Collars', icon: 'CollarIcon' },
-  { name: 'Beds', icon: 'Bed' },
-  { name: 'Bowls', icon: 'BowlIcon' },
-  { name: 'Toys', icon: 'TeddyBear' },
-  { name: 'Others', icon: 'MoreHorizontal' }
+  { name: 'Arneses', icon: 'HarnessIcon' },
+  { name: 'Collares', icon: 'CollarIcon' },
+  { name: 'Camas', icon: 'Bed' },
+  { name: 'Platos', icon: 'BowlIcon' },
+  { name: 'Juguetes', icon: 'TeddyBear' },
+  { name: 'Otros', icon: 'MoreHorizontal' }
 ];
 
 export const TACTICAL_HARNESSES: Product[] = [
@@ -60,7 +60,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     price: 115,
     image: new URL('./assets/products/harnesses/harness-black.png', import.meta.url).href,
     category: 'Harnesses',
-    tag: 'Best Seller'
+    tag: 'Más Vendido'
   },
   {
     id: 'th2',
@@ -77,7 +77,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     price: 125,
     image: new URL('./assets/products/harnesses/harness-purple.png', import.meta.url).href,
     category: 'Harnesses',
-    tag: 'Most Popular'
+    tag: 'Más Popular'
   },
   {
     id: 'th4',
@@ -114,7 +114,7 @@ export const COLLARS: Product[] = [
     price: 35,
     image: new URL('./assets/products/collars/collar-geometric.jpg', import.meta.url).href,
     category: 'Collars',
-    tag: 'Best Seller'
+    tag: 'Más Vendido'
   },
   {
     id: 'col2',
@@ -123,7 +123,7 @@ export const COLLARS: Product[] = [
     price: 38,
     image: new URL('./assets/products/collars/collar-aztec-orange.jpg', import.meta.url).href,
     category: 'Collars',
-    tag: 'Most Popular'
+    tag: 'Más Popular'
   },
   {
     id: 'col3',
@@ -148,7 +148,7 @@ export const COLLARS: Product[] = [
     price: 36,
     image: new URL('./assets/products/collars/collar-green-yellow.jpg', import.meta.url).href,
     category: 'Collars',
-    tag: 'Most Popular'
+    tag: 'Más Popular'
   },
   {
     id: 'col6',
@@ -157,7 +157,7 @@ export const COLLARS: Product[] = [
     price: 38,
     image: new URL('./assets/products/collars/collar-purple-aztec.png', import.meta.url).href,
     category: 'Collars',
-    tag: 'New Edition'
+    tag: 'Nueva Edición'
   }
 ];
 
@@ -169,7 +169,7 @@ export const TOYS: Product[] = [
     price: 28,
     image: new URL('./assets/products/toys/toy-puzzle-green.png', import.meta.url).href,
     category: 'Toys',
-    tag: 'Best Seller'
+    tag: 'Más Vendido'
   },
   {
     id: 'toy2',
@@ -178,7 +178,7 @@ export const TOYS: Product[] = [
     price: 32,
     image: new URL('./assets/products/toys/toy-puzzle-blue.png', import.meta.url).href,
     category: 'Toys',
-    tag: 'Most Popular'
+    tag: 'Más Popular'
   },
   {
     id: 'toy3',
@@ -198,7 +198,7 @@ export const BEDS: Product[] = [
     price: 49,
     image: new URL('./assets/products/beds/bed-lime.jpg', import.meta.url).href,
     category: 'Beds',
-    tag: 'Trending'
+    tag: 'Tendencia'
   },
   {
     id: 'bed2',
@@ -207,7 +207,7 @@ export const BEDS: Product[] = [
     price: 55,
     image: new URL('./assets/products/beds/bed-red.jpg', import.meta.url).href,
     category: 'Beds',
-    tag: 'Best Seller'
+    tag: 'Más Vendido'
   },
   {
     id: 'bed3',
@@ -241,7 +241,7 @@ export const BEDS: Product[] = [
     price: 65,
     image: new URL('./assets/products/beds/bed-purple.jpg', import.meta.url).href,
     category: 'Beds',
-    tag: 'New Edition'
+    tag: 'Nueva Edición'
   }
 ];
 
@@ -253,7 +253,7 @@ export const BOWLS: Product[] = [
     price: 42,
     image: new URL('./assets/products/bowls/bowl-green.png', import.meta.url).href,
     category: 'Bowls',
-    tag: 'Trending'
+    tag: 'Tendencia'
   },
   {
     id: 'bowl2',
@@ -270,7 +270,7 @@ export const BOWLS: Product[] = [
     price: 42,
     image: new URL('./assets/products/bowls/bowl-pink.png', import.meta.url).href,
     category: 'Bowls',
-    tag: 'Best Seller'
+    tag: 'Más Vendido'
   },
   {
     id: 'bowl4',
@@ -287,7 +287,7 @@ export const BOWLS: Product[] = [
     price: 35,
     image: new URL('./assets/products/bowls/bowl-metal-blue.png', import.meta.url).href,
     category: 'Bowls',
-    tag: 'Durable'
+    tag: 'Duradero'
   },
   {
     id: 'bowl6',
@@ -312,7 +312,7 @@ export const BOWLS: Product[] = [
     price: 35,
     image: new URL('./assets/products/bowls/bowl-metal-pink.png', import.meta.url).href,
     category: 'Bowls',
-    tag: 'Most Popular'
+    tag: 'Más Popular'
   }
 ];
 
@@ -324,7 +324,7 @@ export const OTHERS: Product[] = [
     price: 25,
     image: new URL('./assets/products/others/hb_kit_pink.png', import.meta.url).href,
     category: 'Others',
-    tag: 'Trending'
+    tag: 'Tendencia'
   },
   {
     id: 'other2',

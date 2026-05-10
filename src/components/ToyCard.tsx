@@ -27,7 +27,7 @@ const ToyCard: React.FC<ToyCardProps> = ({ product, onAddToCart }) => {
         />
         {product.tag && (
           <div className="toy-card__tag-container">
-            <span className={`toy-card__tag ${product.tag === 'Best Seller' ? 'toy-card__tag--best-seller' : 'toy-card__tag--new'}`}>
+            <span className={`toy-card__tag ${product.tag === 'Más Vendido' ? 'toy-card__tag--best-seller' : 'toy-card__tag--new'}`}>
               {product.tag}
             </span>
           </div>
@@ -48,7 +48,7 @@ const ToyCard: React.FC<ToyCardProps> = ({ product, onAddToCart }) => {
           className={`button toy-card__add-btn ${added ? 'toy-card__add-btn--added' : 'button--secondary'}`}
         >
           <ShoppingBag size={20} />
-          {added ? 'Added! 🐾' : 'Add to Cart'}
+          {added ? 'Agregado! 🐾' : 'Agregar al Carrito'}
         </button>
       </div>
     </div>

@@ -26,11 +26,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) 
 
   const getColorData = () => {
     switch (name.toLowerCase()) {
-      case 'harnesses': return 'var(--color-green-rgb)';
-      case 'collars': return 'var(--color-pink-rgb)';
-      case 'beds': return 'var(--color-light-blue-rgb)';
-      case 'bowls': return 'var(--color-purple-rgb)';
-      case 'toys': return 'var(--color-brown-rgb)';
+      case 'arneses': return 'var(--color-green-rgb)';
+      case 'collares': return 'var(--color-pink-rgb)';
+      case 'camas': return 'var(--color-light-blue-rgb)';
+      case 'platos': return 'var(--color-purple-rgb)';
+      case 'juguetes': return 'var(--color-brown-rgb)';
       default: return 'var(--color-pink-rgb)';
     }
   };

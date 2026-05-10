@@ -27,14 +27,14 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
           <div className="checkout-success__icon-wrapper">
             <ShieldCheck size={48} />
           </div>
-          <h2 className="checkout-success__title">Yay! Order Placed.</h2>
-          <p className="checkout-success__text">Your treats are being packed with love and will be on their way to you shortly.</p>
+          <h2 className="checkout-success__title">¡Listo! Pedido realizado.</h2>
+          <p className="checkout-success__text">Tus productos están siendo empacados con amor y estarán en camino muy pronto.</p>
           <div className="checkout-success__actions">
             <button 
               onClick={() => window.location.reload()}
               className="button button--primary"
             >
-              Continue Shopping
+              Seguir Comprando
             </button>
           </div>
         </div>
@@ -49,8 +49,8 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
           {/* LEFT COLUMN: Checkout Form */}
           <section className="checkout__main">
             <div className="checkout__header">
-              <h1 className="checkout__title">Secure Checkout</h1>
-              <p className="checkout__subtitle">Complete your order for your furry friend below.</p>
+              <h1 className="checkout__title">Pago Seguro</h1>
+              <p className="checkout__subtitle">Completá tu pedido para tu amigo peludo.</p>
             </div>
 
             {/* Shipping Details Section */}
@@ -59,30 +59,30 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                 <div className="checkout-card__icon-wrapper checkout-card__icon-wrapper--primary">
                   <Truck size={20} />
                 </div>
-                <h2 className="checkout-card__title">Shipping Information</h2>
+                <h2 className="checkout-card__title">Información de Envío</h2>
               </div>
               <form className="checkout-form">
                 <div className="checkout-form__row">
                   <div className="checkout-form__group">
-                    <label className="checkout-form__label">First Name</label>
+                    <label className="checkout-form__label">Nombre</label>
                     <input className="checkout-form__input" placeholder="Bela" type="text" />
                   </div>
                   <div className="checkout-form__group">
-                    <label className="checkout-form__label">Last Name</label>
+                    <label className="checkout-form__label">Apellido</label>
                     <input className="checkout-form__input" placeholder="Luna" type="text" />
                   </div>
                 </div>
                 <div className="checkout-form__group">
-                  <label className="checkout-form__label">Shipping Address</label>
-                  <input className="checkout-form__input" placeholder="123 Puppy Lane, Suite 400" type="text" />
+                  <label className="checkout-form__label">Dirección de Envío</label>
+                  <input className="checkout-form__input" placeholder="Calle Principal 123, Apto 400" type="text" />
                 </div>
                 <div className="checkout-form__row">
                   <div className="checkout-form__group">
-                    <label className="checkout-form__label">City</label>
-                    <input className="checkout-form__input" placeholder="Barkington" type="text" />
+                    <label className="checkout-form__label">Ciudad</label>
+                    <input className="checkout-form__input" placeholder="Managua" type="text" />
                   </div>
                   <div className="checkout-form__group">
-                    <label className="checkout-form__label">Postal Code</label>
+                    <label className="checkout-form__label">Código Postal</label>
                     <input className="checkout-form__input" placeholder="90210" type="text" />
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                 <div className="checkout-card__icon-wrapper checkout-card__icon-wrapper--secondary">
                   <CreditCard size={20} />
                 </div>
-                <h2 className="checkout-card__title">Payment Method</h2>
+                <h2 className="checkout-card__title">Método de Pago</h2>
               </div>
               <div className="payment-methods">
                 <div className="payment-methods__chips">
@@ -111,7 +111,7 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                 </div>
                 <div className="checkout-form">
                   <div className="checkout-form__group">
-                    <label className="checkout-form__label">Card Number</label>
+                    <label className="checkout-form__label">Número de Tarjeta</label>
                     <div className="checkout-form__input-wrapper">
                       <input className="checkout-form__input" placeholder="•••• •••• •••• ••••" type="text" />
                       <CreditCard className="checkout-form__input-icon" size={20} />
@@ -119,7 +119,7 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                   </div>
                   <div className="checkout-form__row">
                     <div className="checkout-form__group">
-                      <label className="checkout-form__label">Expiry Date</label>
+                      <label className="checkout-form__label">Fecha de Vencimiento</label>
                       <input className="checkout-form__input" placeholder="MM/YY" type="text" />
                     </div>
                     <div className="checkout-form__group">
@@ -135,18 +135,18 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
               onClick={handleCompletePurchase}
               className="button button--primary checkout__submit"
             >
-              <Lock size={24} /> Complete Purchase
+              <Lock size={24} /> Completar Compra
             </button>
           </section>
 
           {/* RIGHT COLUMN: Order Summary */}
           <aside className="checkout__summary">
             <div className="summary-card">
-              <h2 className="summary-card__title">Order Summary</h2>
+              <h2 className="summary-card__title">Resumen del Pedido</h2>
               
               <div className="summary-card__items">
                 {cart.length === 0 ? (
-                  <p className="summary-card__empty">Your cart is empty.</p>
+                  <p className="summary-card__empty">Tu carrito está vacío.</p>
                 ) : (
                   cart.map((item, index) => (
                     <CartItem 
@@ -164,11 +164,11 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                   <span className="summary-card__value">${totalPrice.toFixed(2)}</span>
                 </div>
                 <div className="summary-card__row">
-                  <span>Shipping</span>
-                  <span className="summary-card__value summary-card__value--free">Free</span>
+                  <span>Envío</span>
+                  <span className="summary-card__value summary-card__value--free">Gratis</span>
                 </div>
                 <div className="summary-card__row">
-                  <span>Tax</span>
+                  <span>Impuesto</span>
                   <span className="summary-card__value">${tax.toFixed(2)}</span>
                 </div>
                 <div className="summary-card__row summary-card__row--final">
@@ -182,10 +182,10 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
             <div className="promo-box">
               <Gift className="promo-box__icon" size={24} />
               <div className="promo-box__content">
-                <p className="promo-box__label">Have a coupon?</p>
-                <input className="promo-box__input" placeholder="Enter code" type="text" />
+                <p className="promo-box__label">¿Tenés un cupón?</p>
+                <input className="promo-box__input" placeholder="Ingresá el código" type="text" />
               </div>
-              <button className="promo-box__apply">Apply</button>
+              <button className="promo-box__apply">Aplicar</button>
             </div>
 
             {/* Trust Badges */}

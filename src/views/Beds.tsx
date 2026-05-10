@@ -17,12 +17,12 @@ export default function Beds({ onAddToCart, onCheckout, cartCount, totalPrice }:
       <section className="beds-hero">
         <div className="container">
           <div className="beds-hero__content">
-            <div className="beds-hero__badge">Dream & Rest</div>
+            <div className="beds-hero__badge">Sueño & Descanso</div>
             <h1 className="beds-hero__title">
-              Luxury Pet Beds
+              Camas de Lujo para Mascotas
             </h1>
             <p className="beds-hero__text">
-              The ultimate comfort for your furry friend. Orthopedic support, washable materials, and designs that complement your home.
+              El máximo confort para tu amigo peludo. Soporte ortopédico, materiales lavables y diseños que complementan tu hogar.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Beds({ onAddToCart, onCheckout, cartCount, totalPrice }:
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

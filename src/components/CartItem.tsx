@@ -23,13 +23,13 @@ const CartItem: React.FC<CartItemProps> = ({ item, onRemove }) => {
       <div className="cart-item__info">
         <h3 className="cart-item__name">{product.name}</h3>
         <p className="cart-item__desc">{product.description}</p>
-        <p className="cart-item__size">Size: <strong>{size}</strong></p>
+        <p className="cart-item__size">Talla: <strong>{size}</strong></p>
         <p className="cart-item__price">${product.price.toFixed(2)}</p>
       </div>
       <div className="cart-item__actions">
-        <span className="cart-item__qty-text">Qty 1</span>
+        <span className="cart-item__qty-text">Cant. 1</span>
         {onRemove && (
-          <button className="cart-item__remove" onClick={onRemove} aria-label="Remove item">
+          <button className="cart-item__remove" onClick={onRemove} aria-label="Eliminar producto">
             <X size={16} />
           </button>
         )}

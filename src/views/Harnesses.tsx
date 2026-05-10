@@ -16,12 +16,12 @@ export default function Harnesses({ onAddToCart, onCheckout, cartCount, totalPri
       <section className="harnesses-hero">
         <div className="container">
           <div className="harnesses-hero__content">
-            <div className="harnesses-hero__badge">Tactical & Premium</div>
+            <div className="harnesses-hero__badge">Táctico & Premium</div>
             <h1 className="harnesses-hero__title">
-              Tactical Dog Harnesses
+              Arneses Tácticos para Perros
             </h1>
             <p className="harnesses-hero__text">
-              Built for adventure, safety, and ultimate comfort. Choose the perfect fit for your K-9 companion.
+              Hechos para la aventura, la seguridad y el máximo confort. Encontrá el ajuste perfecto para tu compañero K-9.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function Harnesses({ onAddToCart, onCheckout, cartCount, totalPri
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

@@ -33,7 +33,7 @@ const PetBowlCard: React.FC<PetBowlCardProps> = ({ product, onAddToCart }) => {
         />
         {product.tag && (
           <div className="product-card__tag-container">
-            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : product.tag === 'New Edition' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
+            <span className={`product-card__tag ${product.tag === 'Más Vendido' ? 'product-card__tag--best-seller' : product.tag === 'Nueva Edición' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
               {product.tag}
             </span>
           </div>
@@ -50,7 +50,7 @@ const PetBowlCard: React.FC<PetBowlCardProps> = ({ product, onAddToCart }) => {
         </div>
 
         <div className="bowl-card__size-selector">
-          <span className="bowl-card__size-label">Select Size:</span>
+          <span className="bowl-card__size-label">Elegir Talla:</span>
           <div className="bowl-card__size-options">
             {sizes.map((size) => (
               <button
@@ -69,7 +69,7 @@ const PetBowlCard: React.FC<PetBowlCardProps> = ({ product, onAddToCart }) => {
           className={`button button--secondary product-card__add-btn bowl-card__add-btn ${added ? 'bowl-card__add-btn--added' : !selectedSize ? 'bowl-card__add-btn--pending' : ''}`}
         >
           <ShoppingBag size={20} />
-          {added ? 'Added! 🐾' : selectedSize ? 'Add to Cart' : 'Select a size'}
+          {added ? 'Agregado! 🐾' : selectedSize ? 'Agregar al Carrito' : 'Elige una Talla'}
         </button>
       </div>
     </div>

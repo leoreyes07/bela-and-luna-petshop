@@ -17,12 +17,12 @@ export default function PetBowls({ onAddToCart, onCheckout, cartCount, totalPric
       <section className="pet-bowls-hero">
         <div className="container">
           <div className="pet-bowls-hero__content">
-            <div className="pet-bowls-hero__badge">Fine Dining</div>
+            <div className="pet-bowls-hero__badge">Comida Fina</div>
             <h1 className="pet-bowls-hero__title">
-              Artisan Dining Collection
+              Colección Artesanal de Comederos
             </h1>
             <p className="pet-bowls-hero__text">
-              Elegance meets functionality for every meal. Sophisticated ceramics and durable stainless steel designed for your pet's comfort and your home's style.
+              Elegancia y funcionalidad para cada comida. Cerámicas sofisticadas y acero inoxidable duradero diseñados para el confort de tu mascota y el estilo de tu hogar.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function PetBowls({ onAddToCart, onCheckout, cartCount, totalPric
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

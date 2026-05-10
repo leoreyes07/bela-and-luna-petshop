@@ -26,18 +26,18 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
         <div className="hero__container">
           <div className="hero__content">
             <div className="hero__badge">
-              Premium Pet Essentials
+              Esenciales Premium para tu Mascota
             </div>
             <h1 className="hero__title">
-              Curating Joy <br />
-              <span className="hero__title--highlight">for Every Tail.</span>
+              Diseñado con amor <br />
+              <span className="hero__title--highlight">para cada colita.</span>
             </h1>
             <p className="hero__text">
-              Thoughtfully designed essentials for your best friend. Because every wag and purr deserves the finest editorial quality.
+              Esenciales cuidadosamente diseñados para tu mejor amigo. Porque cada meneo y ronroneo merece lo mejor.
             </p>
             <div className="hero__actions">
               <button className="button button--primary hero__btn" onClick={onNavigateHarnesses}>
-                Shop the Collection
+                Ver la Colección
                 <ArrowRight size={24} />
               </button>
             </div>
@@ -64,9 +64,9 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
         <div className="container">
           <div className="categories-section__header">
             <div className="categories-section__title-group">
-              <h2 className="categories-section__title">Browse by Category</h2>
+              <h2 className="categories-section__title">Explorar por Categoría</h2>
             </div>
-            <p className="categories-section__subtitle">Find exactly what your companion needs.</p>
+            <p className="categories-section__subtitle">Encontrá exactamente lo que tu compañero necesita.</p>
           </div>
           <div className="categories-grid">
             {CATEGORIES.map((cat) => (
@@ -75,12 +75,12 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
                 name={cat.name} 
                 iconName={cat.icon} 
                 onClick={
-                  cat.name === 'Harnesses' ? onNavigateHarnesses
-                  : cat.name === 'Collars' ? onNavigateCollars
-                  : cat.name === 'Toys' ? onNavigateToys
-                  : cat.name === 'Beds' ? onNavigateBeds
-                  : cat.name === 'Bowls' ? onNavigateBowls
-                  : cat.name === 'Others' ? onNavigateOthers
+                  cat.name === 'Arneses' ? onNavigateHarnesses
+                  : cat.name === 'Collares' ? onNavigateCollars
+                  : cat.name === 'Juguetes' ? onNavigateToys
+                  : cat.name === 'Camas' ? onNavigateBeds
+                  : cat.name === 'Platos' ? onNavigateBowls
+                  : cat.name === 'Otros' ? onNavigateOthers
                   : undefined
                 }
               />
@@ -93,10 +93,10 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
       <section className="product-gallery">
         <div className="container">
           <div className="product-gallery__filters no-scrollbar">
-            <button className="filter-chip filter-chip--active">All Harnesses</button>
-            <button className="filter-chip" onClick={onNavigateHarnesses}>Adventure Series</button>
-            <button className="filter-chip" onClick={onNavigateCollars}>City Walks</button>
-            <button className="filter-chip" onClick={onNavigateBeds}>Luxe Velvet</button>
+            <button className="filter-chip filter-chip--active">Todos los Arneses</button>
+            <button className="filter-chip" onClick={onNavigateHarnesses}>Serie Aventura</button>
+            <button className="filter-chip" onClick={onNavigateCollars}>Paseos en Ciudad</button>
+            <button className="filter-chip" onClick={onNavigateBeds}>Terciopelo Lux</button>
           </div>
           <div className="product-grid">
             {PRODUCTS.map((product) => {
@@ -127,18 +127,18 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
         <div className="container">
           <div className="newsletter__card">
             <div className="newsletter__content">
-              <h2 className="newsletter__title">Join the Bella & Luna Lifestyle</h2>
+              <h2 className="newsletter__title">Unite al estilo Bela & Luna</h2>
               <p className="newsletter__text">
-                Get exclusive access to limited-edition drops, editorial pet care tips, and 15% off your first order.
+                Accedé en exclusiva a lanzamientos de edición limitada, consejos de cuidado editorial y 15% de descuento en tu primer pedido.
               </p>
               <form className="newsletter__form" onSubmit={(e) => e.preventDefault()}>
                 <input 
                   className="newsletter__input" 
-                  placeholder="Enter your email" 
+                  placeholder="Ingresá tu email" 
                   type="email" 
                 />
                 <button className="button button--secondary newsletter__btn">
-                  Subscribe
+                  Suscribirme
                 </button>
               </form>
             </div>
@@ -161,7 +161,7 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

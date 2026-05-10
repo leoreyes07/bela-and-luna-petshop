@@ -17,12 +17,12 @@ export default function Others({ onAddToCart, onCheckout, cartCount, totalPrice 
       <section className="others-hero">
         <div className="container">
           <div className="others-hero__content">
-            <div className="others-hero__badge">Fun & Accessories</div>
+            <div className="others-hero__badge">Diversión & Accesorios</div>
             <h1 className="others-hero__title">
-              Special Treats & More
+              Sorpresas Especiales & Más
             </h1>
             <p className="others-hero__text">
-              Discover fun accessories, birthday kits, and unique items to make every moment with your pet unforgettable.
+              Descubrí accesorios divertidos, kits de cumpleaños y artículos únicos para hacer cada momento con tu mascota inolvidable.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Others({ onAddToCart, onCheckout, cartCount, totalPrice 
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

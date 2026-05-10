@@ -25,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImage
         />
         {product.tag && (
           <div className="product-card__tag-container">
-            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : product.tag === 'New Edition' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
+            <span className={`product-card__tag ${product.tag === 'Más Vendido' ? 'product-card__tag--best-seller' : product.tag === 'Nueva Edición' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
               {product.tag}
             </span>
           </div>
@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImage
           className="button button--secondary product-card__add-btn"
         >
           <ShoppingBag size={20} />
-          Add to Cart
+          Agregar al Carrito
         </button>
       </div>
     </div>

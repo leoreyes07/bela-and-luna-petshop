@@ -16,12 +16,12 @@ export default function Toys({ onAddToCart, onCheckout, cartCount, totalPrice }:
       <section className="toys-hero">
         <div className="container">
           <div className="toys-hero__content">
-            <div className="toys-hero__badge">Play & Fun</div>
+            <div className="toys-hero__badge">Juego & Diversión</div>
             <h1 className="toys-hero__title">
-              Pet Toy Collection
+              Colección de Juguetes para Mascotas
             </h1>
             <p className="toys-hero__text">
-              Stimulate your best friend's mind with our interactive toy collection. Designed to entertain, challenge, and reward.
+              Estimulá la mente de tu mejor amigo con nuestra colección de juguetes interactivos. Diseñados para entretener, desafiar y recompensar.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function Toys({ onAddToCart, onCheckout, cartCount, totalPrice }:
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

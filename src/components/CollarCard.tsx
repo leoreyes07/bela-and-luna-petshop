@@ -31,7 +31,7 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
         />
         {product.tag && (
           <div className="product-card__tag-container">
-            <span className={`product-card__tag ${product.tag === 'Best Seller' ? 'product-card__tag--best-seller' : product.tag === 'New Edition' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
+            <span className={`product-card__tag ${product.tag === 'Más Vendido' ? 'product-card__tag--best-seller' : product.tag === 'Nueva Edición' ? 'product-card__tag--new-edition' : 'product-card__tag--most-popular'}`}>
               {product.tag}
             </span>
           </div>
@@ -47,7 +47,7 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
         </div>
 
         <div className="collar-card__size-selector">
-          <span className="collar-card__size-label">Select Size:</span>
+          <span className="collar-card__size-label">Elegir Talla:</span>
           <div className="collar-card__size-options">
             {SIZES.map(size => (
               <button
@@ -67,7 +67,7 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
           className={`button button--secondary product-card__add-btn collar-card__add-btn ${!selectedSize ? 'collar-card__add-btn--disabled' : ''}`}
         >
           <ShoppingBag size={20} />
-          {selectedSize ? 'Add to Cart' : 'Select a Size'}
+          {selectedSize ? 'Agregar al Carrito' : 'Elige una Talla'}
         </button>
       </div>
     </div>

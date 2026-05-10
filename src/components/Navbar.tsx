@@ -36,7 +36,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
         {!isCheckout ? (
           <>
             <div className={`navbar__links ${isMenuOpen ? 'navbar__links--open' : ''}`}>
-              <a href="#" className={`navbar__link ${currentView === 'home' ? 'navbar__link--active' : ''}`} onClick={(e) => { e.preventDefault(); onBackClick?.(); closeMenu(); }}>Home</a>
+              <a href="#" className={`navbar__link ${currentView === 'home' ? 'navbar__link--active' : ''}`} onClick={(e) => { e.preventDefault(); onBackClick?.(); closeMenu(); }}>Inicio</a>
               <a 
                 href="#" 
                 className={`navbar__link ${currentView === 'harnesses' ? 'navbar__link--active' : ''}`}
@@ -46,7 +46,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                   closeMenu();
                 }}
               >
-                Harnesses
+                Arneses
               </a>
               <a 
                 href="#" 
@@ -57,7 +57,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                   closeMenu();
                 }}
               >
-                Collars
+                Collares
               </a>
               <a 
                 href="#" 
@@ -68,7 +68,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                   closeMenu();
                 }}
               >
-                Beds
+                Camas
               </a>
               <a 
                 href="#" 
@@ -79,7 +79,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                   closeMenu();
                 }}
               >
-                Pet Bowls
+                Platos
               </a>
               <a 
                 href="#" 
@@ -90,7 +90,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                   closeMenu();
                 }}
               >
-                Toys
+                Juguetes
               </a>
               <a 
                 href="#" 
@@ -101,7 +101,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                   closeMenu();
                 }}
               >
-                Others
+                Otros
               </a>
             </div>
             <div className="navbar__actions">
@@ -130,7 +130,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
             className="navbar__back-btn"
           >
             <ArrowLeft size={20} />
-            <span>Back to Shop</span>
+            <span>Volver a la Tienda</span>
           </button>
         )}
       </div>

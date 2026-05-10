@@ -16,12 +16,12 @@ export default function Collars({ onAddToCart, onCheckout, cartCount, totalPrice
       <section className="collars-hero">
         <div className="container">
           <div className="collars-hero__content">
-            <div className="collars-hero__badge">Patterned & Original</div>
+            <div className="collars-hero__badge">Estampados & Originales</div>
             <h1 className="collars-hero__title">
-              Dog Collars Collection
+              Colección de Collares para Perros
             </h1>
             <p className="collars-hero__text">
-              Unique, durable, and full of color. Find the perfect collar to match your pet's personality.
+              Únicos, resistentes y llenos de color. Encontrá el collar perfecto que refleje la personalidad de tu mascota.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function Collars({ onAddToCart, onCheckout, cartCount, totalPrice
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Checkout • ${totalPrice.toFixed(2)}
+              Pagar • ${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>
