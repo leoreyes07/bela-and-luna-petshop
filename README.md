@@ -1,20 +1,57 @@
+# Bela & Luna Petshop
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img src="public/screenshot-desktop.png" alt="Vista Desktop" width="800" style="border-radius: 8px; margin-bottom: 15px;" />
+  <p><em>Vista de la tienda en escritorio (Ejemplo, reemplazá esta imagen)</em></p>
+  
+  <div style="display: flex; justify-content: center; gap: 20px;">
+    <img src="public/screenshot-mobile1.png" alt="Vista Mobile" width="250" style="border-radius: 8px;" />
+    <img src="public/screenshot-mobile2.png" alt="Carrito Mobile" width="250" style="border-radius: 8px;" />
+  </div>
+  <p><em>Vista móvil y carrito de compras</em></p>
 </div>
 
-# Run and deploy your AI Studio app
+Una tienda en línea moderna y amigable dedicada a consentir a tus mascotas con los mejores accesorios. En Bela & Luna Petshop, elegimos cuidadosamente cada accesorio para ofrecerte productos que destacan por su calidad, confort y estilo, porque tu mascota merece lo mejor en cada detalle.
 
-This contains everything you need to run your app locally.
+## Características Principales
 
-View your app in AI Studio: https://ai.studio/apps/2a6adc2a-6645-4d33-a637-6404cea5150c
+- **Catálogo de Productos:** Organizado por categorías intuitivas (Arneses, Collares, Camas, Comederos, Juguetes y Otros).
+- **Animaciones Interactivas:** Detalles encantadores como huellas de perritos que aparecen al interactuar o desplazarse por la página.
+- **Carrito de Compras:** Funcionalidad del lado del cliente para agregar artículos al carrito.
+- **Checkout Frontend:** Flujo de proceso de pago implementado a nivel visual y de interfaz de usuario.
+- **Diseño Responsivo:** Completamente adaptable a dispositivos móviles, tablets y pantallas de escritorio.
+- **Arquitectura CSS:** Uso de metodologías como BEM y CSS puro (HTML5 y CSS3 nativo, sin frameworks como Tailwind o Bootstrap).
 
-## Run Locally
+## Tecnologías Utilizadas
 
-**Prerequisites:**  Node.js
+- **Frontend:** React, HTML5, Vanilla CSS3 (metodología BEM), JavaScript
+- **Herramientas de Construcción:** Vite
+- **Backend/API:** Node.js, Express
 
+## Instalación y Ejecución
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Requisitos previos:** Asegúrate de tener Node.js (v18 o superior) instalado.
+
+1. Clona el repositorio e ingresa a la carpeta del proyecto.
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Ejecuta el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre tu navegador en la URL indicada por Vite (normalmente `http://localhost:5173/`).
+
+## Paleta de Colores y UI
+
+**Colores Principales:**
+- Blanco: `#FFFFFF`
+- Verde: `#00CC99`
+- Rosado: `#E2006E`
+- Café: `#790438`
+
+**Colores Secundarios:**
+- Morado: `#8C52FF`
+- Amarillo: `#FFEE88`
+- Celeste: `#00C2CB`

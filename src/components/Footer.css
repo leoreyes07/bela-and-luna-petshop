@@ -11,24 +11,17 @@
   padding: 0 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 32px;
-}
-
-@media (min-width: 1024px) {
-  .footer__container {
-    flex-direction: row;
-    display: grid;
-    grid-template-cols: 2fr 1.5fr 1fr 2fr;
-    align-items: center;
-  }
 }
 
 .footer__brand {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
 }
 
 .footer__logo {
@@ -41,7 +34,8 @@
 .footer__tagline {
   color: rgba(121, 4, 56, 0.4);
   font-size: 12px;
-  max-width: 200px;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 .footer__links {
@@ -71,5 +65,5 @@
 .footer__copyright {
   font-size: 11px;
   color: rgba(121, 4, 56, 0.4);
-  text-align: right;
+  text-align: center;
 }

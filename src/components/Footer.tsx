@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer__brand">
           <div className="footer__logo">Bela & Luna Pet Shop</div>
           <p className="footer__tagline">
-            En Bela & Luna Petshop, creemos que tu mascota es familia. Por eso ofrecemos accesorios cuidadosamente diseñados, combinando estilo, comodidad y calidad, para acompañar cada momento de su vida con amor y personalidad.
+            En Bela & Luna Petshop, elegimos cuidadosamente cada accesorio para ofrecerte productos que destacan por su calidad, confort y estilo,<br />porque tu mascota merece lo mejor en cada detalle.
           </p>
         </div>
         
