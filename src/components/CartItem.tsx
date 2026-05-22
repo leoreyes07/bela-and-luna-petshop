@@ -18,6 +18,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onRemove }) => {
           alt={product.name} 
           referrerPolicy="no-referrer"
           className="cart-item__image" 
+          loading="lazy"
         />
       </div>
       <div className="cart-item__info">

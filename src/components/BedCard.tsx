@@ -31,6 +31,7 @@ const BedCard: React.FC<BedCardProps> = ({ product, onAddToCart }) => {
           src={product.image} 
           alt={product.name} 
           className="product-card__image bed-card__image" 
+          loading="lazy"
         />
         {product.tag && (
           <div className="product-card__tag-container">

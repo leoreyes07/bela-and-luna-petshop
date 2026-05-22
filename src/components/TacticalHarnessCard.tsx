@@ -29,6 +29,7 @@ const TacticalHarnessCard: React.FC<TacticalHarnessCardProps> = ({ product, onAd
           alt={product.name}
           referrerPolicy="no-referrer"
           className="product-card__image tac-card__image"
+          loading="lazy"
         />
         {product.tag && (
           <div className="product-card__tag-container">

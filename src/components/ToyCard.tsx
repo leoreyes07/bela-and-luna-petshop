@@ -24,6 +24,7 @@ const ToyCard: React.FC<ToyCardProps> = ({ product, onAddToCart }) => {
           src={product.image}
           alt={product.name}
           className="toy-card__image"
+          loading="lazy"
         />
         {product.tag && (
           <div className="toy-card__tag-container">

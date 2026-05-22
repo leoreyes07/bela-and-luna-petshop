@@ -30,6 +30,7 @@ const PetBowlCard: React.FC<PetBowlCardProps> = ({ product, onAddToCart }) => {
           src={product.image} 
           alt={product.name} 
           className={`product-card__image bowl-card__image ${product.name.toLowerCase().includes('stainless') ? 'bowl-card__image--metal' : ''}`} 
+          loading="lazy"
         />
         {product.tag && (
           <div className="product-card__tag-container">

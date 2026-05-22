@@ -22,6 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImage
           alt={product.name}
           referrerPolicy="no-referrer"
           className="product-card__image"
+          loading="lazy"
         />
         {product.tag && (
           <div className="product-card__tag-container">

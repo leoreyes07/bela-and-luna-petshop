@@ -28,6 +28,7 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
           src={product.image}
           alt={product.name}
           className="product-card__image collar-card__image"
+          loading="lazy"
         />
         {product.tag && (
           <div className="product-card__tag-container">
