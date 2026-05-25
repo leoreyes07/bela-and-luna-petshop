@@ -84,6 +84,11 @@
   font-size: 20px;
   font-weight: 700;
   color: var(--color-brown);
+  min-height: 56px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-card__desc {
@@ -106,6 +111,8 @@
   background-color: var(--color-pink);
   border-radius: 9999px;
   box-shadow: 0 10px 20px rgba(226, 0, 110, 0.2);
+  margin-top: auto;
+  white-space: nowrap;
 }
 
 .product-card__add-btn:hover {

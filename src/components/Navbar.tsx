@@ -1,113 +1,44 @@
+import { useCart } from '../contexts/CartContext';
 import { useState } from 'react';
 import { ShoppingCart, ArrowLeft, Menu, X } from 'lucide-react';
 import logo from '../assets/logo.webp';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-
-interface NavbarProps {
-  onCartClick: () => void;
-  onBackClick?: () => void;
-  onNavigateHarnesses?: () => void;
-  onNavigateCollars?: () => void;
-  onNavigateToys?: () => void;
-  onNavigateBeds?: () => void;
-  onNavigateBowls?: () => void;
-  onNavigateOthers?: () => void;
-  currentView?: string;
-  isCheckout?: boolean;
-  cartCount: number;
-}
-
-export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, onNavigateCollars, onNavigateToys, onNavigateBeds, onNavigateBowls, onNavigateOthers, currentView, isCheckout, cartCount }: NavbarProps) {
+export default function Navbar() {
+  const { cartCount } = useCart();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const closeMenu = () => setIsMenuOpen(false);
+  const isCheckout = location.pathname === '/checkout';
 
   return (
     <nav className={`navbar ${isCheckout ? 'navbar--checkout' : ''}`}>
       <div className="navbar__container">
-        <div 
+        <Link 
+          to="/"
           className="navbar__logo"
-          onClick={() => onBackClick?.()}
+          onClick={closeMenu}
         >
           <img src={logo} alt="Bela & Luna" className="navbar__logo-img" />
-        </div>
+        </Link>
         
         {!isCheckout ? (
           <>
             <div className={`navbar__links ${isMenuOpen ? 'navbar__links--open' : ''}`}>
-              <a href="#" className={`navbar__link ${currentView === 'home' ? 'navbar__link--active' : ''}`} onClick={(e) => { e.preventDefault(); onBackClick?.(); closeMenu(); }}>Inicio</a>
-              <a 
-                href="#" 
-                className={`navbar__link ${currentView === 'harnesses' ? 'navbar__link--active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigateHarnesses?.();
-                  closeMenu();
-                }}
-              >
-                Arneses
-              </a>
-              <a 
-                href="#" 
-                className={`navbar__link ${currentView === 'collars' ? 'navbar__link--active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigateCollars?.();
-                  closeMenu();
-                }}
-              >
-                Collares
-              </a>
-              <a 
-                href="#" 
-                className={`navbar__link ${currentView === 'beds' ? 'navbar__link--active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigateBeds?.();
-                  closeMenu();
-                }}
-              >
-                Camas
-              </a>
-              <a 
-                href="#" 
-                className={`navbar__link ${currentView === 'bowls' ? 'navbar__link--active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigateBowls?.();
-                  closeMenu();
-                }}
-              >
-                Platos
-              </a>
-              <a 
-                href="#" 
-                className={`navbar__link ${currentView === 'toys' ? 'navbar__link--active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigateToys?.();
-                  closeMenu();
-                }}
-              >
-                Juguetes
-              </a>
-              <a 
-                href="#" 
-                className={`navbar__link ${currentView === 'others' ? 'navbar__link--active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigateOthers?.();
-                  closeMenu();
-                }}
-              >
-                Otros
-              </a>
+              <Link to="/" className={`navbar__link ${location.pathname === '/' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Inicio</Link>
+              <Link to="/harnesses" className={`navbar__link ${location.pathname === '/harnesses' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Arneses</Link>
+              <Link to="/collars" className={`navbar__link ${location.pathname === '/collars' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Collares</Link>
+              <Link to="/beds" className={`navbar__link ${location.pathname === '/beds' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Camas</Link>
+              <Link to="/bowls" className={`navbar__link ${location.pathname === '/bowls' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Platos</Link>
+              <Link to="/toys" className={`navbar__link ${location.pathname === '/toys' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Juguetes</Link>
+              <Link to="/others" className={`navbar__link ${location.pathname === '/others' ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Otros</Link>
             </div>
             <div className="navbar__actions">
-              <button 
-                onClick={onCartClick}
+              <Link 
+                to="/checkout"
                 className="navbar__cart-btn"
+                onClick={closeMenu}
               >
                 <ShoppingCart size={24} />
                 {cartCount > 0 && (
@@ -115,7 +46,7 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
                     {cartCount}
                   </span>
                 )}
-              </button>
+              </Link>
               <button 
                 className="navbar__menu-btn"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -125,13 +56,13 @@ export default function Navbar({ onCartClick, onBackClick, onNavigateHarnesses, 
             </div>
           </>
         ) : (
-          <button 
-            onClick={onBackClick}
+          <Link 
+            to="/"
             className="navbar__back-btn"
           >
             <ArrowLeft size={20} />
             <span>Volver a la Tienda</span>
-          </button>
+          </Link>
         )}
       </div>
     </nav>

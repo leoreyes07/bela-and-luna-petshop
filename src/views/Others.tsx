@@ -1,17 +1,14 @@
 import React from 'react';
+import { useCart } from '../contexts/CartContext';
 import { ShoppingCart } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import { OTHERS, Product } from '../constants';
 import './Others.css';
 
-interface OthersProps {
-  onAddToCart: (product: Product, size: string) => void;
-  onCheckout: () => void;
-  cartCount: number;
-  totalPrice: number;
-}
 
-export default function Others({ onAddToCart, onCheckout, cartCount, totalPrice }: OthersProps) {
+
+export default function Others() {
+  const { cartCount, totalPrice, addToCart } = useCart();
   return (
     <main className="others">
       <section className="others-hero">
@@ -35,30 +32,14 @@ export default function Others({ onAddToCart, onCheckout, cartCount, totalPrice 
               <ProductCard
                 key={product.id}
                 product={product}
-                onAddToCart={(prod) => onAddToCart(prod, 'Único')}
+                onAddToCart={(prod) => addToCart(prod, 'Único')}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Floating Cart */}
-      {cartCount > 0 && (
-        <div className="floating-cart">
-          <button
-            onClick={onCheckout}
-            className="floating-cart__btn"
-          >
-            <div className="floating-cart__icon-wrapper">
-              <ShoppingCart size={24} />
-              <span className="floating-cart__count">{cartCount}</span>
-            </div>
-            <span className="floating-cart__label">
-              Pagar • C${totalPrice.toFixed(2)}
-            </span>
-          </button>
-        </div>
-      )}
+      
     </main>
   );
 }

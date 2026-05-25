@@ -1,16 +1,13 @@
+import { useCart } from '../contexts/CartContext';
 import { ShoppingCart } from 'lucide-react';
 import TacticalHarnessCard from '../components/TacticalHarnessCard';
 import { TACTICAL_HARNESSES, Product } from '../constants';
 import './Harnesses.css';
 
-interface HarnessesProps {
-  onAddToCart: (product: Product, size: string) => void;
-  onCheckout: () => void;
-  cartCount: number;
-  totalPrice: number;
-}
 
-export default function Harnesses({ onAddToCart, onCheckout, cartCount, totalPrice }: HarnessesProps) {
+
+export default function Harnesses() {
+  const { cartCount, totalPrice, addToCart } = useCart();
   return (
     <main className="harnesses">
       <section className="harnesses-hero">
@@ -34,30 +31,14 @@ export default function Harnesses({ onAddToCart, onCheckout, cartCount, totalPri
               <TacticalHarnessCard 
                 key={product.id} 
                 product={product} 
-                onAddToCart={onAddToCart} 
+                onAddToCart={addToCart} 
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Floating Cart */}
-      {cartCount > 0 && (
-        <div className="floating-cart">
-          <button 
-            onClick={onCheckout}
-            className="floating-cart__btn"
-          >
-            <div className="floating-cart__icon-wrapper">
-              <ShoppingCart size={24} />
-              <span className="floating-cart__count">{cartCount}</span>
-            </div>
-            <span className="floating-cart__label">
-              Pagar • C${totalPrice.toFixed(2)}
-            </span>
-          </button>
-        </div>
-      )}
+      
     </main>
   );
 }

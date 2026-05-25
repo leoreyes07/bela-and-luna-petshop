@@ -51,3 +51,7 @@
   border-color: #E5E7EB;
   transform: none !important;
 }
+
+.tac-card__add-btn {
+  margin-top: 16px !important;
+}

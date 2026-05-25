@@ -2,19 +2,16 @@ import { Truck, CreditCard, Wallet, Send, Lock, Gift, ShieldCheck, RotateCcw, Pa
 import { Product, CartItemType } from '../constants';
 import CartItem from '../components/CartItem';
 import { useState } from 'react';
+import { useCart } from '../contexts/CartContext';
 import './Checkout.css';
 
-interface CheckoutProps {
-  cart: CartItemType[];
-  totalPrice: number;
-  onRemoveItem: (index: number) => void;
-}
 
-export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutProps) {
+
+export default function Checkout() {
+  const { cart, totalPrice, removeFromCart } = useCart();
   const [isSuccess, setIsSuccess] = useState(false);
   const shipping = 0;
-  const tax = totalPrice * 0.08;
-  const finalTotal = totalPrice + shipping + tax;
+  const finalTotal = totalPrice + shipping;
 
   const handleCompletePurchase = () => {
     setIsSuccess(true);
@@ -152,7 +149,7 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                     <CartItem 
                       key={`${item.product.id}-${index}`} 
                       item={item} 
-                      onRemove={() => onRemoveItem(index)}
+                      onRemove={() => removeFromCart(index)}
                     />
                   ))
                 )}
@@ -166,10 +163,6 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
                 <div className="summary-card__row">
                   <span>Envío (no incluido)</span>
                   <span className="summary-card__value summary-card__value--pending">Por calcular</span>
-                </div>
-                <div className="summary-card__row">
-                  <span>Impuesto</span>
-                  <span className="summary-card__value">C${tax.toFixed(2)}</span>
                 </div>
                 <div className="summary-card__row summary-card__row--final">
                   <span className="summary-card__total-label">Total</span>

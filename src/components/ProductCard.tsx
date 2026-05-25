@@ -12,7 +12,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImageClick }) => {
   let displayPrice = `C$${product.price}`;
   if (product.pricesBySize) {
-    const prices = Object.values(product.pricesBySize);
+    const prices = Object.values(product.pricesBySize) as number[];
     const min = Math.min(...prices);
     const max = Math.max(...prices);
     displayPrice = min === max ? `C$${min}` : `C$${min} - C$${max}`;

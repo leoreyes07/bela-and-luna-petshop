@@ -1,24 +1,15 @@
-import { ArrowRight, Dog, Leaf, ShoppingCart } from 'lucide-react';
+import { useCart } from '../contexts/CartContext';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight, Dog, Leaf } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
-import { PRODUCTS, CATEGORIES, Product } from '../constants';
+import { PRODUCTS, CATEGORIES } from '../constants';
 import heroDogs from '../assets/hero-dogs.webp';
 import './Home.css';
 
-interface HomeProps {
-  onAddToCart: (product: Product, size?: string) => void;
-  onCheckout: () => void;
-  onNavigateHarnesses: () => void;
-  onNavigateCollars: () => void;
-  onNavigateToys: () => void;
-  onNavigateBeds: () => void;
-  onNavigateBowls: () => void;
-  onNavigateOthers: () => void;
-  cartCount: number;
-  totalPrice: number;
-}
-
-export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onNavigateCollars, onNavigateToys, onNavigateBeds, onNavigateBowls, onNavigateOthers, cartCount, totalPrice }: HomeProps) {
+export default function Home() {
+  const { cartCount, totalPrice, addToCart } = useCart();
+  const navigate = useNavigate();
   return (
     <main className="home">
       {/* Hero Section */}
@@ -36,7 +27,7 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
               Esenciales cuidadosamente diseñados para tu mejor amigo. Porque cada meneo y ronroneo merece lo mejor.
             </p>
             <div className="hero__actions">
-              <button className="button button--primary hero__btn" onClick={onNavigateHarnesses}>
+              <button className="button button--primary hero__btn" onClick={() => navigate('/harnesses')}>
                 Ver la Colección
                 <ArrowRight size={24} />
               </button>
@@ -75,12 +66,12 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
                 name={cat.name} 
                 iconName={cat.icon} 
                 onClick={
-                  cat.name === 'Arneses' ? onNavigateHarnesses
-                  : cat.name === 'Collares' ? onNavigateCollars
-                  : cat.name === 'Juguetes' ? onNavigateToys
-                  : cat.name === 'Camas' ? onNavigateBeds
-                  : cat.name === 'Platos' ? onNavigateBowls
-                  : cat.name === 'Otros' ? onNavigateOthers
+                  cat.name === 'Arneses' ? () => navigate('/harnesses')
+                  : cat.name === 'Collares' ? () => navigate('/collars')
+                  : cat.name === 'Juguetes' ? () => navigate('/toys')
+                  : cat.name === 'Camas' ? () => navigate('/beds')
+                  : cat.name === 'Platos' ? () => navigate('/bowls')
+                  : cat.name === 'Otros' ? () => navigate('/others')
                   : undefined
                 }
               />
@@ -93,27 +84,27 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
       <section className="product-gallery">
         <div className="container">
           <div className="product-gallery__filters no-scrollbar">
-            <button className="filter-chip filter-chip--active">Todos los Arneses</button>
-            <button className="filter-chip" onClick={onNavigateHarnesses}>Serie Aventura</button>
-            <button className="filter-chip" onClick={onNavigateCollars}>Paseos en Ciudad</button>
-            <button className="filter-chip" onClick={onNavigateBeds}>Terciopelo Lux</button>
+            <button className="filter-chip filter-chip--active">Todos los Productos</button>
+            <button className="filter-chip" onClick={() => navigate('/harnesses')}>Serie Aventura</button>
+            <button className="filter-chip" onClick={() => navigate('/collars')}>Paseos en Ciudad</button>
+            <button className="filter-chip" onClick={() => navigate('/beds')}>Terciopelo Lux</button>
           </div>
           <div className="product-grid">
             {PRODUCTS.map((product) => {
               const handleNavigateToCategory = () => {
-                if (product.category === 'Harnesses') onNavigateHarnesses();
-                else if (product.category === 'Collars') onNavigateCollars();
-                else if (product.category === 'Beds') onNavigateBeds();
-                else if (product.category === 'Toys') onNavigateToys();
-                else if (product.category === 'Bowls') onNavigateBowls();
-                else if (product.category === 'Others') onNavigateOthers();
+                if (product.category === 'Harnesses') navigate('/harnesses');
+                else if (product.category === 'Collars') navigate('/collars');
+                else if (product.category === 'Beds') navigate('/beds');
+                else if (product.category === 'Toys') navigate('/toys');
+                else if (product.category === 'Bowls') navigate('/bowls');
+                else if (product.category === 'Others') navigate('/others');
               };
 
               return (
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  onAddToCart={handleNavigateToCategory} 
+                  onAddToCart={addToCart} 
                   onImageClick={handleNavigateToCategory}
                 />
               );
@@ -148,24 +139,6 @@ export default function Home({ onAddToCart, onCheckout, onNavigateHarnesses, onN
           </div>
         </div>
       </section>
-
-      {/* Floating Cart */}
-      {cartCount > 0 && (
-        <div className="floating-cart">
-          <button 
-            onClick={onCheckout}
-            className="floating-cart__btn"
-          >
-            <div className="floating-cart__icon-wrapper">
-              <ShoppingCart size={24} />
-              <span className="floating-cart__count">{cartCount}</span>
-            </div>
-            <span className="floating-cart__label">
-              Pagar • C${totalPrice.toFixed(2)}
-            </span>
-          </button>
-        </div>
-      )}
     </main>
   );
 }

@@ -1,16 +1,13 @@
+import { useCart } from '../contexts/CartContext';
 import { ShoppingCart } from 'lucide-react';
 import ToyCard from '../components/ToyCard';
 import { TOYS, Product } from '../constants';
 import './Toys.css';
 
-interface ToysProps {
-  onAddToCart: (product: Product, size: string) => void;
-  onCheckout: () => void;
-  cartCount: number;
-  totalPrice: number;
-}
 
-export default function Toys({ onAddToCart, onCheckout, cartCount, totalPrice }: ToysProps) {
+
+export default function Toys() {
+  const { cartCount, totalPrice, addToCart } = useCart();
   return (
     <main className="toys">
       <section className="toys-hero">
@@ -34,30 +31,14 @@ export default function Toys({ onAddToCart, onCheckout, cartCount, totalPrice }:
               <ToyCard
                 key={product.id}
                 product={product}
-                onAddToCart={onAddToCart}
+                onAddToCart={addToCart}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Floating Cart */}
-      {cartCount > 0 && (
-        <div className="floating-cart">
-          <button
-            onClick={onCheckout}
-            className="floating-cart__btn"
-          >
-            <div className="floating-cart__icon-wrapper">
-              <ShoppingCart size={24} />
-              <span className="floating-cart__count">{cartCount}</span>
-            </div>
-            <span className="floating-cart__label">
-              Pagar • C${totalPrice.toFixed(2)}
-            </span>
-          </button>
-        </div>
-      )}
+      
     </main>
   );
 }

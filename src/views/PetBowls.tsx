@@ -1,17 +1,14 @@
 import React from 'react';
+import { useCart } from '../contexts/CartContext';
 import { ShoppingCart } from 'lucide-react';
 import PetBowlCard from '../components/PetBowlCard';
 import { BOWLS, Product } from '../constants';
 import './PetBowls.css';
 
-interface PetBowlsProps {
-  onAddToCart: (product: Product, size: string) => void;
-  onCheckout: () => void;
-  cartCount: number;
-  totalPrice: number;
-}
 
-export default function PetBowls({ onAddToCart, onCheckout, cartCount, totalPrice }: PetBowlsProps) {
+
+export default function PetBowls() {
+  const { cartCount, totalPrice, addToCart } = useCart();
   return (
     <main className="pet-bowls">
       <section className="pet-bowls-hero">
@@ -35,30 +32,14 @@ export default function PetBowls({ onAddToCart, onCheckout, cartCount, totalPric
               <PetBowlCard
                 key={bowl.id}
                 product={bowl}
-                onAddToCart={onAddToCart}
+                onAddToCart={addToCart}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Floating Cart */}
-      {cartCount > 0 && (
-        <div className="floating-cart">
-          <button
-            onClick={onCheckout}
-            className="floating-cart__btn"
-          >
-            <div className="floating-cart__icon-wrapper">
-              <ShoppingCart size={24} />
-              <span className="floating-cart__count">{cartCount}</span>
-            </div>
-            <span className="floating-cart__label">
-              Pagar • C${totalPrice.toFixed(2)}
-            </span>
-          </button>
-        </div>
-      )}
+      
     </main>
   );
 }
