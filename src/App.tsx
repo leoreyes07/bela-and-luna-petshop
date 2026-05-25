@@ -35,10 +35,11 @@ export default function App() {
   }, []);
 
   const cartCount = cart.length;
-  const totalPrice = useMemo(() => cart.reduce((sum, item) => sum + item.product.price, 0), [cart]);
+  const totalPrice = useMemo(() => cart.reduce((sum, item) => sum + item.price, 0), [cart]);
 
   const handleAddToCart = (product: Product, size: string = 'M') => {
-    setCart((prev) => [...prev, { product, size }]);
+    const price = product.pricesBySize ? (product.pricesBySize[size] || product.price) : product.price;
+    setCart((prev) => [...prev, { product, size, price }]);
   };
 
   const handleRemoveFromCart = (indexToRemove: number) => {

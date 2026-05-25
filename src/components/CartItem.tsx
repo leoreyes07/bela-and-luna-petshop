@@ -9,7 +9,7 @@ interface CartItemProps {
 }
 
 const CartItem: React.FC<CartItemProps> = ({ item, onRemove }) => {
-  const { product, size } = item;
+  const { product, size, price } = item;
   return (
     <div className="cart-item">
       <div className="cart-item__image-container">
@@ -25,7 +25,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onRemove }) => {
         <h3 className="cart-item__name">{product.name}</h3>
         <p className="cart-item__desc">{product.description}</p>
         <p className="cart-item__size">Talla: <strong>{size}</strong></p>
-        <p className="cart-item__price">${product.price.toFixed(2)}</p>
+        <p className="cart-item__price">C${price.toFixed(2)}</p>
       </div>
       <div className="cart-item__actions">
         <span className="cart-item__qty-text">Cant. 1</span>

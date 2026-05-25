@@ -47,7 +47,7 @@ const PetBowlCard: React.FC<PetBowlCardProps> = ({ product, onAddToCart }) => {
             <h3 className="product-card__title bowl-card__title">{product.name}</h3>
             <p className="product-card__desc bowl-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price bowl-card__price">${product.price}</span>
+          <span className="product-card__price bowl-card__price">C${product.price}</span>
         </div>
 
         <div className="bowl-card__size-selector">

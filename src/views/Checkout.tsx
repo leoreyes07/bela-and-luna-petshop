@@ -161,19 +161,22 @@ export default function Checkout({ cart, totalPrice, onRemoveItem }: CheckoutPro
               <div className="summary-card__totals">
                 <div className="summary-card__row">
                   <span>Subtotal</span>
-                  <span className="summary-card__value">${totalPrice.toFixed(2)}</span>
+                  <span className="summary-card__value">C${totalPrice.toFixed(2)}</span>
                 </div>
                 <div className="summary-card__row">
-                  <span>Envío</span>
-                  <span className="summary-card__value summary-card__value--free">Gratis</span>
+                  <span>Envío (no incluido)</span>
+                  <span className="summary-card__value summary-card__value--pending">Por calcular</span>
                 </div>
                 <div className="summary-card__row">
                   <span>Impuesto</span>
-                  <span className="summary-card__value">${tax.toFixed(2)}</span>
+                  <span className="summary-card__value">C${tax.toFixed(2)}</span>
                 </div>
                 <div className="summary-card__row summary-card__row--final">
                   <span className="summary-card__total-label">Total</span>
-                  <span className="summary-card__total-value">${finalTotal.toFixed(2)}</span>
+                  <span className="summary-card__total-value">C${finalTotal.toFixed(2)}</span>
+                </div>
+                <div className="summary-card__disclaimer" style={{ fontSize: '0.8rem', color: '#666', textAlign: 'right', marginTop: '8px' }}>
+                  * El precio no incluye el costo de envío.
                 </div>
               </div>
             </div>

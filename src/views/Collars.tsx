@@ -53,7 +53,7 @@ export default function Collars({ onAddToCart, onCheckout, cartCount, totalPrice
               <span className="floating-cart__count">{cartCount}</span>
             </div>
             <span className="floating-cart__label">
-              Pagar • ${totalPrice.toFixed(2)}
+              Pagar • C${totalPrice.toFixed(2)}
             </span>
           </button>
         </div>

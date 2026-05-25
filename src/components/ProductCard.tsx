@@ -10,6 +10,14 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImageClick }) => {
+  let displayPrice = `C$${product.price}`;
+  if (product.pricesBySize) {
+    const prices = Object.values(product.pricesBySize);
+    const min = Math.min(...prices);
+    const max = Math.max(...prices);
+    displayPrice = min === max ? `C$${min}` : `C$${min} - C$${max}`;
+  }
+
   return (
     <div className="product-card">
       <div 
@@ -38,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImage
             <h3 className="product-card__title">{product.name}</h3>
             <p className="product-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price">${product.price}</span>
+          <span className="product-card__price">{displayPrice}</span>
         </div>
         <button 
           onClick={() => onAddToCart(product)}

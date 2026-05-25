@@ -48,7 +48,7 @@ const BedCard: React.FC<BedCardProps> = ({ product, onAddToCart }) => {
             <h3 className="product-card__title bed-card__title">{product.name}</h3>
             <p className="product-card__desc bed-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price bed-card__price">${product.price}</span>
+          <span className="product-card__price bed-card__price">C${product.price}</span>
         </div>
 
         <div className="bed-card__size-selector">

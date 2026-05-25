@@ -41,7 +41,7 @@ const ToyCard: React.FC<ToyCardProps> = ({ product, onAddToCart }) => {
             <h3 className="toy-card__title">{product.name}</h3>
             <p className="toy-card__desc">{product.description}</p>
           </div>
-          <span className="toy-card__price">${product.price}</span>
+          <span className="toy-card__price">C${product.price}</span>
         </div>
 
         <button

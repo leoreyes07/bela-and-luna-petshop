@@ -44,7 +44,7 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
             <h3 className="product-card__title collar-card__title">{product.name}</h3>
             <p className="product-card__desc collar-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price collar-card__price">${product.price}</span>
+          <span className="product-card__price collar-card__price">C${product.price}</span>
         </div>
 
         <div className="collar-card__size-selector">

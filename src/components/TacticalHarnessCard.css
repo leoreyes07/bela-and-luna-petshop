@@ -1,5 +1,6 @@
 .tac-card__size-selector {
-  margin-top: var(--spacing-sm);
+  margin-top: auto;
+  padding-top: var(--spacing-sm);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);

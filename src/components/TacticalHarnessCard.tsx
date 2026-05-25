@@ -21,6 +21,20 @@ const TacticalHarnessCard: React.FC<TacticalHarnessCardProps> = ({ product, onAd
     }
   };
 
+  const availableSizes = product.pricesBySize ? Object.keys(product.pricesBySize) : SIZES;
+  
+  let displayPrice = `C$${product.price}`;
+  if (product.pricesBySize) {
+    if (selectedSize) {
+      displayPrice = `C$${product.pricesBySize[selectedSize]}`;
+    } else {
+      const prices = Object.values(product.pricesBySize);
+      const min = Math.min(...prices);
+      const max = Math.max(...prices);
+      displayPrice = min === max ? `C$${min}` : `C$${min} - C$${max}`;
+    }
+  }
+
   return (
     <div className="product-card tac-card">
       <div className="product-card__image-container tac-card__image-container">
@@ -45,13 +59,13 @@ const TacticalHarnessCard: React.FC<TacticalHarnessCardProps> = ({ product, onAd
             <h3 className="product-card__title tac-card__title">{product.name}</h3>
             <p className="product-card__desc tac-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price tac-card__price">${product.price}</span>
+          <span className="product-card__price tac-card__price">{displayPrice}</span>
         </div>
         
         <div className="tac-card__size-selector">
           <span className="tac-card__size-label">Elegir Talla:</span>
           <div className="tac-card__size-options">
-            {SIZES.map(size => (
+            {availableSizes.map(size => (
               <button 
                 key={size}
                 className={`tac-card__size-btn ${selectedSize === size ? 'tac-card__size-btn--active' : ''}`}
