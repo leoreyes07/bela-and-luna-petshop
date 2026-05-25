@@ -19,7 +19,7 @@ export const PRODUCTS: Product[] = [
     name: 'Stealth Black Harness',
     description: 'Service K-9 • Security Unit',
     price: 115,
-    image: new URL('./assets/products/harnesses/harness-black.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-black.webp', import.meta.url).href,
     category: 'Harnesses',
     tag: 'Más Vendido'
   },
@@ -28,7 +28,7 @@ export const PRODUCTS: Product[] = [
     name: 'Aztec Orange Collar',
     description: 'Aztec Pattern • Orange & Teal',
     price: 38,
-    image: new URL('./assets/products/collars/collar-aztec-orange.jpg', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-aztec-orange.webp', import.meta.url).href,
     category: 'Collars',
     tag: 'Más Popular'
   },
@@ -37,7 +37,7 @@ export const PRODUCTS: Product[] = [
     name: 'Royal Purple Cloud',
     description: 'Velvet Soft Touch • Extra Padding',
     price: 65,
-    image: new URL('./assets/products/beds/bed-purple.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-purple.webp', import.meta.url).href,
     category: 'Beds',
     tag: 'Nueva Edición'
   }
@@ -58,7 +58,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     name: 'Stealth Black Harness',
     description: 'Service K-9 • Security Unit',
     price: 115,
-    image: new URL('./assets/products/harnesses/harness-black.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-black.webp', import.meta.url).href,
     category: 'Harnesses',
     tag: 'Más Vendido'
   },
@@ -67,7 +67,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     name: 'Desert Khaki Harness',
     description: 'Service K-9 • Tactical Gear',
     price: 110,
-    image: new URL('./assets/products/harnesses/harness-khaki.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-khaki.webp', import.meta.url).href,
     category: 'Harnesses'
   },
   {
@@ -75,7 +75,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     name: 'Urban Purple Digital Camo',
     description: 'Service K-9 • Training in Progress',
     price: 125,
-    image: new URL('./assets/products/harnesses/harness-purple.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-purple.webp', import.meta.url).href,
     category: 'Harnesses',
     tag: 'Más Popular'
   },
@@ -84,7 +84,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     name: 'Navy Digital Camo Harness',
     description: 'Service Dog • K9 Unit',
     price: 120,
-    image: new URL('./assets/products/harnesses/harness-blue-black.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-blue-black.webp', import.meta.url).href,
     category: 'Harnesses'
   },
   {
@@ -92,7 +92,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     name: 'Tactical Grey Harness',
     description: 'Police K-9 • Reflection Strips',
     price: 125,
-    image: new URL('./assets/products/harnesses/harness-grey.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-grey.webp', import.meta.url).href,
     category: 'Harnesses',
     tag: 'Premium'
   },
@@ -101,7 +101,7 @@ export const TACTICAL_HARNESSES: Product[] = [
     name: 'Rose Tactical Harness',
     description: 'Service Dog • Bright & Bold',
     price: 110,
-    image: new URL('./assets/products/harnesses/harness-pink.png', import.meta.url).href,
+    image: new URL('./assets/products/harnesses/harness-pink.webp', import.meta.url).href,
     category: 'Harnesses'
   }
 ];
@@ -112,7 +112,7 @@ export const COLLARS: Product[] = [
     name: 'Geometric Teal Collar',
     description: 'Geometric Print • Teal & Orange',
     price: 35,
-    image: new URL('./assets/products/collars/collar-geometric.jpg', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-geometric.webp', import.meta.url).href,
     category: 'Collars',
     tag: 'Más Vendido'
   },
@@ -121,7 +121,7 @@ export const COLLARS: Product[] = [
     name: 'Aztec Orange Collar',
     description: 'Aztec Pattern • Orange & Teal',
     price: 38,
-    image: new URL('./assets/products/collars/collar-aztec-orange.jpg', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-aztec-orange.webp', import.meta.url).href,
     category: 'Collars',
     tag: 'Más Popular'
   },
@@ -130,7 +130,7 @@ export const COLLARS: Product[] = [
     name: 'Purple Chevron Collar',
     description: 'Purple Chevron • Modern Style',
     price: 35,
-    image: new URL('./assets/products/collars/collar-purple-chevron.jpg', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-purple-chevron.webp', import.meta.url).href,
     category: 'Collars'
   },
   {
@@ -138,7 +138,7 @@ export const COLLARS: Product[] = [
     name: 'Blue Tribal Collar',
     description: 'Blue Tribal • Ethnic Design',
     price: 37,
-    image: new URL('./assets/products/collars/collar-blue-aztec.jpg', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-blue-aztec.webp', import.meta.url).href,
     category: 'Collars'
   },
   {
@@ -146,7 +146,7 @@ export const COLLARS: Product[] = [
     name: 'Green Yellow Boho Collar',
     description: 'Boho Green & Yellow • Vibrant',
     price: 36,
-    image: new URL('./assets/products/collars/collar-green-yellow.jpg', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-green-yellow.webp', import.meta.url).href,
     category: 'Collars',
     tag: 'Más Popular'
   },
@@ -155,7 +155,7 @@ export const COLLARS: Product[] = [
     name: 'Purple Aztec Collar',
     description: 'Aztec Pattern • Purple & Vibrant',
     price: 38,
-    image: new URL('./assets/products/collars/collar-purple-aztec.png', import.meta.url).href,
+    image: new URL('./assets/products/collars/collar-purple-aztec.webp', import.meta.url).href,
     category: 'Collars',
     tag: 'Nueva Edición'
   }
@@ -167,7 +167,7 @@ export const TOYS: Product[] = [
     name: 'Sunflower Puzzle Feeder',
     description: 'Interactive Spinner • Level 1 Enrichment',
     price: 28,
-    image: new URL('./assets/products/toys/toy-puzzle-green.png', import.meta.url).href,
+    image: new URL('./assets/products/toys/toy-puzzle-green.webp', import.meta.url).href,
     category: 'Toys',
     tag: 'Más Vendido'
   },
@@ -176,7 +176,7 @@ export const TOYS: Product[] = [
     name: 'Blue Galaxy Puzzle',
     description: 'Slow Feeder • Anti-Scoff Design',
     price: 32,
-    image: new URL('./assets/products/toys/toy-puzzle-blue.png', import.meta.url).href,
+    image: new URL('./assets/products/toys/toy-puzzle-blue.webp', import.meta.url).href,
     category: 'Toys',
     tag: 'Más Popular'
   },
@@ -185,7 +185,7 @@ export const TOYS: Product[] = [
     name: 'Red Flower Maze',
     description: 'Level 2 Challenge • Enrichment Toy',
     price: 35,
-    image: new URL('./assets/products/toys/toy-puzzle-red.png', import.meta.url).href,
+    image: new URL('./assets/products/toys/toy-puzzle-red.webp', import.meta.url).href,
     category: 'Toys'
   }
 ];
@@ -196,7 +196,7 @@ export const BEDS: Product[] = [
     name: 'Lime Paradise Bed',
     description: 'Washable Cushion • Ultra-Soft Plush',
     price: 49,
-    image: new URL('./assets/products/beds/bed-lime.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-lime.webp', import.meta.url).href,
     category: 'Beds',
     tag: 'Tendencia'
   },
@@ -205,7 +205,7 @@ export const BEDS: Product[] = [
     name: 'Crimson Comfort Bed',
     description: 'Orthopedic Foam • Durable Cover',
     price: 55,
-    image: new URL('./assets/products/beds/bed-red.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-red.webp', import.meta.url).href,
     category: 'Beds',
     tag: 'Más Vendido'
   },
@@ -214,7 +214,7 @@ export const BEDS: Product[] = [
     name: 'Bubblegum Dream Bed',
     description: 'Breathable Fabric • Removable Cover',
     price: 52,
-    image: new URL('./assets/products/beds/bed-pink.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-pink.webp', import.meta.url).href,
     category: 'Beds'
   },
   {
@@ -222,7 +222,7 @@ export const BEDS: Product[] = [
     name: 'Deep Sea Sanctuary',
     description: 'Premium Fleece • Anti-Slip Bottom',
     price: 58,
-    image: new URL('./assets/products/beds/bed-blue.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-blue.webp', import.meta.url).href,
     category: 'Beds',
     tag: 'Premium'
   },
@@ -231,7 +231,7 @@ export const BEDS: Product[] = [
     name: 'Morning Sky Blue Bed',
     description: 'Cooling Gel Fiber • Summer Comfort',
     price: 54,
-    image: new URL('./assets/products/beds/bed-lightblue.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-lightblue.webp', import.meta.url).href,
     category: 'Beds'
   },
   {
@@ -239,7 +239,7 @@ export const BEDS: Product[] = [
     name: 'Royal Purple Cloud',
     description: 'Velvet Soft Touch • Extra Padding',
     price: 65,
-    image: new URL('./assets/products/beds/bed-purple.jpg', import.meta.url).href,
+    image: new URL('./assets/products/beds/bed-purple.webp', import.meta.url).href,
     category: 'Beds',
     tag: 'Nueva Edición'
   }
@@ -251,7 +251,7 @@ export const BOWLS: Product[] = [
     name: 'Serein Ceramic - Sage',
     description: 'Hand-glazed matte finish • Hypoallergenic ceramic',
     price: 42,
-    image: new URL('./assets/products/bowls/bowl-green.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-green.webp', import.meta.url).href,
     category: 'Bowls',
     tag: 'Tendencia'
   },
@@ -260,7 +260,7 @@ export const BOWLS: Product[] = [
     name: 'Serein Ceramic - Cream',
     description: 'Minimalist stoneware • Dishwasher safe',
     price: 42,
-    image: new URL('./assets/products/bowls/bowl-beige.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-beige.webp', import.meta.url).href,
     category: 'Bowls'
   },
   {
@@ -268,7 +268,7 @@ export const BOWLS: Product[] = [
     name: 'Serein Ceramic - Rose',
     description: 'Premium weighted clay • Anti-spill design',
     price: 42,
-    image: new URL('./assets/products/bowls/bowl-pink.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-pink.webp', import.meta.url).href,
     category: 'Bowls',
     tag: 'Más Vendido'
   },
@@ -277,7 +277,7 @@ export const BOWLS: Product[] = [
     name: 'Serein Ceramic - Sky',
     description: 'Ethereal blue glaze • Scratch resistant',
     price: 42,
-    image: new URL('./assets/products/bowls/bowl-blue.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-blue.webp', import.meta.url).href,
     category: 'Bowls'
   },
   {
@@ -285,7 +285,7 @@ export const BOWLS: Product[] = [
     name: 'Atlas Stainless - Cobalt',
     description: 'Double-walled insulated steel • Mirror finish',
     price: 35,
-    image: new URL('./assets/products/bowls/bowl-metal-blue.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-metal-blue.webp', import.meta.url).href,
     category: 'Bowls',
     tag: 'Duradero'
   },
@@ -294,7 +294,7 @@ export const BOWLS: Product[] = [
     name: 'Atlas Stainless - Ruby',
     description: 'Non-slip rubber base • High-gloss lacquer',
     price: 35,
-    image: new URL('./assets/products/bowls/bowl-metal-red.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-metal-red.webp', import.meta.url).href,
     category: 'Bowls'
   },
   {
@@ -302,7 +302,7 @@ export const BOWLS: Product[] = [
     name: 'Atlas Stainless - Sunset',
     description: 'BPA-free powder coating • Adventure ready',
     price: 35,
-    image: new URL('./assets/products/bowls/bowl-metal-orange.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-metal-orange.webp', import.meta.url).href,
     category: 'Bowls'
   },
   {
@@ -310,7 +310,7 @@ export const BOWLS: Product[] = [
     name: 'Atlas Stainless - Blush',
     description: 'Lightweight & sturdy • Easy to clean',
     price: 35,
-    image: new URL('./assets/products/bowls/bowl-metal-pink.png', import.meta.url).href,
+    image: new URL('./assets/products/bowls/bowl-metal-pink.webp', import.meta.url).href,
     category: 'Bowls',
     tag: 'Más Popular'
   }
@@ -322,7 +322,7 @@ export const OTHERS: Product[] = [
     name: 'Happy Birthday Pink Kit',
     description: 'Includes bandana, hat, and banner!',
     price: 25,
-    image: new URL('./assets/products/others/hb_kit_pink.png', import.meta.url).href,
+    image: new URL('./assets/products/others/hb_kit_pink.webp', import.meta.url).href,
     category: 'Others',
     tag: 'Tendencia'
   },
@@ -331,7 +331,7 @@ export const OTHERS: Product[] = [
     name: 'Happy Birthday Blue Kit',
     description: 'Includes bandana, hat, and banner!',
     price: 25,
-    image: new URL('./assets/products/others/hb_kit_blue.png', import.meta.url).href,
+    image: new URL('./assets/products/others/hb_kit_blue.webp', import.meta.url).href,
     category: 'Others'
   }
 ];

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ShoppingCart, ArrowLeft, Menu, X } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.webp';
 import './Navbar.css';
 
 

@@ -2,7 +2,7 @@ import { ArrowRight, Dog, Leaf, ShoppingCart } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
 import { PRODUCTS, CATEGORIES, Product } from '../constants';
-import heroDogs from '../assets/hero-dogs.jpg';
+import heroDogs from '../assets/hero-dogs.webp';
 import './Home.css';
 
 interface HomeProps {
