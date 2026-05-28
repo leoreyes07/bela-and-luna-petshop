@@ -28,10 +28,7 @@ const TacticalHarnessCard: React.FC<TacticalHarnessCardProps> = ({ product, onAd
     if (selectedSize) {
       displayPrice = `C$${product.pricesBySize[selectedSize]}`;
     } else {
-      const prices = Object.values(product.pricesBySize) as number[];
-      const min = Math.min(...prices);
-      const max = Math.max(...prices);
-      displayPrice = min === max ? `C$${min}` : `C$${min} - C$${max}`;
+      displayPrice = ''; // No mostrar nada hasta que elija talla
     }
   }
 
