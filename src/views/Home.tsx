@@ -104,7 +104,7 @@ export default function Home() {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  onAddToCart={addToCart} 
+                  onAddToCart={(prod, size) => addToCart(prod, size)} 
                   onImageClick={handleNavigateToCategory}
                 />
               );
