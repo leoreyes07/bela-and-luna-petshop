@@ -18,7 +18,7 @@ export default function Harnesses() {
               Arneses Tácticos para Perros
             </h1>
             <p className="harnesses-hero__text">
-              Hechos para la aventura, la seguridad y el máximo confort. Encontrá el ajuste perfecto para tu compañero K-9.
+              Hechos para la aventura, la seguridad y el máximo confort. Encontrá el ajuste perfecto para tu compañero.
             </p>
           </div>
         </div>
@@ -28,17 +28,17 @@ export default function Harnesses() {
         <div className="container">
           <div className="product-grid">
             {TACTICAL_HARNESSES.map((product) => (
-              <TacticalHarnessCard 
-                key={product.id} 
-                product={product} 
-                onAddToCart={addToCart} 
+              <TacticalHarnessCard
+                key={product.id}
+                product={product}
+                onAddToCart={addToCart}
               />
             ))}
           </div>
         </div>
       </section>
 
-      
+
     </main>
   );
 }

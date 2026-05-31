@@ -9,7 +9,7 @@ interface CollarCardProps {
   onAddToCart: (product: Product, size: string) => void;
 }
 
-const SIZES = ['S', 'M', 'L', 'XL'];
+const SIZES = ['S', 'M', 'L'];
 
 const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
   const [selectedSize, setSelectedSize] = useState<string>('');
@@ -20,6 +20,17 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
       setSelectedSize('');
     }
   };
+
+  const availableSizes = product.pricesBySize ? Object.keys(product.pricesBySize) : SIZES;
+
+  let displayPrice = `C$${product.price}`;
+  if (product.pricesBySize) {
+    if (selectedSize) {
+      displayPrice = `C$${product.pricesBySize[selectedSize]}`;
+    } else {
+      displayPrice = ''; // No mostrar nada hasta que elija talla
+    }
+  }
 
   return (
     <div className="product-card collar-card">
@@ -44,13 +55,13 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
             <h3 className="product-card__title collar-card__title">{product.name}</h3>
             <p className="product-card__desc collar-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price collar-card__price">C${product.price}</span>
+          <span className="product-card__price collar-card__price">{displayPrice}</span>
         </div>
 
         <div className="collar-card__size-selector">
           <span className="collar-card__size-label">Elegir Talla:</span>
           <div className="collar-card__size-options">
-            {SIZES.map(size => (
+            {availableSizes.map(size => (
               <button
                 key={size}
                 className={`collar-card__size-btn ${selectedSize === size ? 'collar-card__size-btn--active' : ''}`}
@@ -68,7 +79,7 @@ const CollarCard: React.FC<CollarCardProps> = ({ product, onAddToCart }) => {
           className={`button button--secondary product-card__add-btn collar-card__add-btn ${!selectedSize ? 'collar-card__add-btn--disabled' : ''}`}
         >
           <ShoppingBag size={20} />
-          {selectedSize ? 'Agregar al Carrito' : 'Elige una Talla'}
+          {selectedSize ? 'Agregar al Carrito' : 'Elige una talla'}
         </button>
       </div>
     </div>

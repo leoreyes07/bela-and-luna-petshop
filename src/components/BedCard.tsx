@@ -13,7 +13,7 @@ const BedCard: React.FC<BedCardProps> = ({ product, onAddToCart }) => {
   const [selectedSize, setSelectedSize] = useState<string>('');
   const [added, setAdded] = useState(false);
 
-  const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+  const availableSizes = product.pricesBySize ? Object.keys(product.pricesBySize) : ['XS', 'S', 'M', 'L', 'XL'];
 
   const handleAddToCart = () => {
     if (selectedSize) {
@@ -23,6 +23,15 @@ const BedCard: React.FC<BedCardProps> = ({ product, onAddToCart }) => {
       setSelectedSize(''); // Reset after adding for consistency
     }
   };
+
+  let displayPrice = `C$${product.price}`;
+  if (product.pricesBySize) {
+    if (selectedSize) {
+      displayPrice = `C$${product.pricesBySize[selectedSize]}`;
+    } else {
+      displayPrice = ''; // No mostrar nada hasta que elija talla
+    }
+  }
 
   return (
     <div className="product-card bed-card">
@@ -48,13 +57,13 @@ const BedCard: React.FC<BedCardProps> = ({ product, onAddToCart }) => {
             <h3 className="product-card__title bed-card__title">{product.name}</h3>
             <p className="product-card__desc bed-card__desc">{product.description}</p>
           </div>
-          <span className="product-card__price bed-card__price">C${product.price}</span>
+          <span className="product-card__price bed-card__price">{displayPrice}</span>
         </div>
 
         <div className="bed-card__size-selector">
           <span className="bed-card__size-label">Elegir Talla:</span>
           <div className="bed-card__size-options">
-            {sizes.map((size) => (
+            {availableSizes.map((size) => (
               <button
                 key={size}
                 className={`bed-card__size-btn ${selectedSize === size ? 'bed-card__size-btn--active' : ''}`}
@@ -71,7 +80,7 @@ const BedCard: React.FC<BedCardProps> = ({ product, onAddToCart }) => {
           className={`button button--secondary product-card__add-btn bed-card__add-btn ${added ? 'bed-card__add-btn--added' : !selectedSize ? 'bed-card__add-btn--pending' : ''}`}
         >
           <ShoppingBag size={20} />
-          {added ? 'Agregado! 🐾' : selectedSize ? 'Agregar al Carrito' : 'Elige una Talla'}
+          {added ? 'Agregado! 🐾' : selectedSize ? 'Agregar al Carrito' : 'Elige una talla'}
         </button>
       </div>
     </div>
