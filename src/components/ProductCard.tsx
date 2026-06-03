@@ -46,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onImage
           src={product.image} 
           alt={product.name}
           referrerPolicy="no-referrer"
-          className="product-card__image"
+          className={`product-card__image ${product.imageFit === 'contain' ? 'product-card__image--contain' : ''}`}
           loading="lazy"
         />
         {product.tag && (

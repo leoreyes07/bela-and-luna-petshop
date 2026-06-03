@@ -28,6 +28,12 @@
   transition: transform 0.7s ease;
 }
 
+.product-card__image--contain {
+  object-fit: contain;
+  padding: 12px;
+  background-color: var(--color-white);
+}
+
 .product-card:hover .product-card__image {
   transform: scale(1.1);
 }

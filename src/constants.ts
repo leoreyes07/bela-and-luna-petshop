@@ -7,6 +7,7 @@ export interface Product {
   image: string;
   category: string;
   tag?: string;
+  imageFit?: 'cover' | 'contain';
 }
 
 export interface CartItemType {
@@ -364,5 +365,15 @@ export const OTHERS: Product[] = [
     price: 480,
     image: new URL('./assets/products/others/hb_kit_blue.webp', import.meta.url).href,
     category: 'Others'
+  },
+  {
+    id: 'other3',
+    name: 'Lima Corta-úñas Recargable',
+    description: 'Inalámbrica y recargable • Cuidado seguro y silencioso',
+    price: 600,
+    image: new URL('./assets/products/others/clipper.webp', import.meta.url).href,
+    category: 'Others',
+    tag: 'Nuevo',
+    imageFit: 'contain'
   }
 ];
