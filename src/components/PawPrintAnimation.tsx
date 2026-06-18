@@ -7,7 +7,10 @@ interface Paw {
   color: string;
 }
 
-const PAW_COLORS = ['#8C52FF', '#FFEE88', '#00C2CB']; // Purple, Yellow, Light Blue
+const PAW_COLORS = [
+  '#8C52FF', '#FFEE88', '#00C2CB', // Secondary colors (Purple, Yellow, Light Blue)
+  '#00CC99', '#E2006E', '#790438'  // Main colors (Green, Pink, Brown - excluding white for visibility)
+];
 
 const PawPrintAnimation: React.FC = () => {
   const [paws, setPaws] = useState<Paw[]>([]);
