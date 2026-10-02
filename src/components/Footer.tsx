@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Instagram, Facebook } from 'lucide-react';
 import './Footer.css';
 
@@ -13,7 +14,7 @@ export default function Footer() {
         </div>
         
         <nav className="footer__links">
-          <a href="#" className="footer__link">Privacidad</a>
+          <Link to="/privacy" className="footer__link">Privacidad</Link>
           <a href="#" className="footer__link">Términos</a>
           <a href="#" className="footer__link">Envíos</a>
           <a href="#" className="footer__link">Devoluciones</a>

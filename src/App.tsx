@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useCart } from './contexts/CartContext';
 import { ShoppingCart } from 'lucide-react';
@@ -12,13 +13,17 @@ import Toys from './views/Toys';
 import Beds from './views/Beds';
 import PetBowls from './views/PetBowls';
 import Others from './views/Others';
-import { Product, CartItemType } from './constants';
+import PrivacyPolicy from './views/PrivacyPolicy';
 
 export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const { cartCount, totalPrice } = useCart();
   const isCheckout = location.pathname === '/checkout';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="app-container">
@@ -35,6 +40,7 @@ export default function App() {
           <Route path="/bowls" element={<PetBowls />} />
           <Route path="/others" element={<Others />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
 
