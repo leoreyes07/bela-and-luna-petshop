@@ -1,4 +1,4 @@
-import { ShieldCheck, Lock, HardDrive, Heart, Mail, CheckCircle, ArrowLeft } from 'lucide-react';
+import { ShieldCheck, Lock, HardDrive, Heart, Mail, CheckCircle, ArrowLeft, Scale } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './PrivacyPolicy.css';
 
@@ -18,13 +18,13 @@ export default function PrivacyPolicy() {
         {/* Header Section */}
         <header className="privacy-policy__header">
           <div className="privacy-policy__badge">
-            <ShieldCheck size={18} />
-            <span>Compromiso Bela & Luna</span>
+            <Scale size={18} />
+            <span>Marco Legal Nicaragua</span>
           </div>
           <h1 className="privacy-policy__title">Política de Privacidad</h1>
           <p className="privacy-policy__subtitle">
-            En <strong>Bela & Luna Petshop</strong> nos tomamos la privacidad de nuestros clientes y el bienestar de sus mascotas muy en serio.
-            Aquí te explicamos de manera clara y transparente cómo cuidamos tus datos personales.
+            En <strong>Bela & Luna Petshop</strong> nos tomamos muy en serio la privacidad de nuestros clientes y el bienestar de sus mascotas.
+            Esta política se rige en pleno cumplimiento de la <em>Ley No. 787 "Ley de Protección de Datos Personales de la República de Nicaragua"</em> y el <em>Artículo 26 de la Constitución Política</em>.
           </p>
         </header>
 
@@ -34,9 +34,9 @@ export default function PrivacyPolicy() {
             <div className="privacy-policy__card-icon">
               <ShieldCheck size={28} />
             </div>
-            <h3 className="privacy-policy__card-title">Datos Protegidos</h3>
+            <h3 className="privacy-policy__card-title">Ley No. 787 Nicaragua</h3>
             <p className="privacy-policy__card-text">
-              Solicitamos únicamente los datos estrictamente necesarios para procesar tus pedidos de accesorios y productos.
+              Garantizamos la confidencialidad, integridad y seguridad de tus datos conforme a la legislación nicaragüense.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
             </div>
             <h3 className="privacy-policy__card-title">Checkout Transparente</h3>
             <p className="privacy-policy__card-text">
-              El proceso de pago se realiza directamente en el frontend sin almacenar información sensible en servidores de terceros.
+              El procesamiento de compras se realiza directamente en el frontend sin almacenar información bancaria ni datos sensibles.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
             </div>
             <h3 className="privacy-policy__card-title">Almacenamiento Local</h3>
             <p className="privacy-policy__card-text">
-              Usamos el almacenamiento local de tu navegador exclusivamente para mantener el estado de tu carrito de compras.
+              Usamos el almacenamiento local de tu navegador exclusivamente para guardar el estado de tu carrito de compras.
             </p>
           </div>
 
@@ -64,9 +64,9 @@ export default function PrivacyPolicy() {
             <div className="privacy-policy__card-icon">
               <Heart size={28} />
             </div>
-            <h3 className="privacy-policy__card-title">Amor y Respeto</h3>
+            <h3 className="privacy-policy__card-title">Derechos ARCO</h3>
             <p className="privacy-policy__card-text">
-              No vendemos, alquilamos ni compartimos tus datos personales con terceros para fines publicitarios no autorizados.
+              Tenés derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de tus datos personales en cualquier momento.
             </p>
           </div>
         </div>
@@ -80,17 +80,17 @@ export default function PrivacyPolicy() {
               1. Información que Recopilamos
             </h2>
             <p className="privacy-policy__text">
-              Cuando interactuás con nuestra tienda virtual o realizás un pedido, recopilamos la siguiente información personal:
+              En conformidad con el <em>Artículo 5 de la Ley No. 787</em>, solicitamos únicamente los datos personales estrictamente necesarios para brindar nuestros servicios:
             </p>
             <ul className="privacy-policy__list">
               <li className="privacy-policy__item">
-                <strong>Datos de contacto:</strong> Nombre, apellido, correo electrónico y número telefónico.
+                <strong>Datos de Identificación y Contacto:</strong> Nombre, apellido, número telefónico y correo electrónico.
               </li>
               <li className="privacy-policy__item">
-                <strong>Datos de envío:</strong> Dirección de entrega y detalles específicos para la entrega del paquete.
+                <strong>Datos de Entrega en Nicaragua:</strong> Dirección física (municipio y departamento) para coordinar el envío de tus productos.
               </li>
               <li className="privacy-policy__item">
-                <strong>Detalles del pedido:</strong> Arneses, collares, camas, comederos o juguetes seleccionados para tu mascota.
+                <strong>Detalles del Pedido:</strong> Arneses, collares, camas, comederos o juguetes seleccionados para tu mascota.
               </li>
             </ul>
           </section>
@@ -98,47 +98,59 @@ export default function PrivacyPolicy() {
           <section className="privacy-policy__section">
             <h2 className="privacy-policy__section-title">
               <CheckCircle size={22} className="privacy-policy__icon-bullet" />
-              2. Uso de la Información
+              2. Finalidad del Tratamiento de Datos
             </h2>
             <p className="privacy-policy__text">
-              La información que nos proporcionás se utiliza exclusivamente para los siguientes propósitos:
+              Los datos personales recolectados serán utilizados exclusivamente para los siguientes fines legítimos:
             </p>
             <ul className="privacy-policy__list">
-              <li className="privacy-policy__item">Procesar y coordinar el envío de tus compras en la tienda.</li>
-              <li className="privacy-policy__item">Brindarte soporte y responder tus dudas a través de nuestros canales oficiales.</li>
-              <li className="privacy-policy__item">Mejorar la experiencia de usuario y la navegación en nuestra plataforma web.</li>
+              <li className="privacy-policy__item">Procesar, despachar y entregar tus pedidos dentro del territorio de la República de Nicaragua.</li>
+              <li className="privacy-policy__item">Brindarte atención al cliente directa a través de nuestros canales oficiales de comunicación (WhatsApp / Redes Sociales).</li>
+              <li className="privacy-policy__item">Garantizar una óptima experiencia de navegación y uso dentro de nuestra tienda virtual.</li>
             </ul>
           </section>
 
           <section className="privacy-policy__section">
             <h2 className="privacy-policy__section-title">
               <CheckCircle size={22} className="privacy-policy__icon-bullet" />
-              3. Almacenamiento Local (LocalStorage)
+              3. Almacenamiento Local y Cookies
             </h2>
             <p className="privacy-policy__text">
-              Nuestra plataforma utiliza tecnología de <code>LocalStorage</code> del navegador para guardar temporalmente
-              los artículos que agregás al carrito de compras. Esto garantiza que tus selecciones no se pierdan al navegar entre
-              las distintas categorías de productos. Podés limpiar esta información en cualquier momento borrando el historial o la memoria caché de tu navegador.
+              Nuestra plataforma utiliza la función de <code>LocalStorage</code> del navegador web del cliente únicamente para mantener activos los productos agregados al carrito de compras durante la sesión. No utilizamos cookies de rastreo invasivas ni compartimos tu información de navegación con redes de publicidad externas.
             </p>
           </section>
 
           <section className="privacy-policy__section">
             <h2 className="privacy-policy__section-title">
               <CheckCircle size={22} className="privacy-policy__icon-bullet" />
-              4. Enlaces a Redes Sociales
+              4. Derechos ARCO del Usuario (Ley No. 787)
             </h2>
             <p className="privacy-policy__text">
-              Nuestro sitio incluye enlaces hacia nuestras cuentas oficiales en Instagram, Facebook y TikTok. Al hacer clic en estos enlaces, serás redirigido a plataformas externas que cuentan con sus propias políticas de privacidad independientes.
+              Como titular de tus datos personales en Nicaragua, contás con los siguientes derechos garantizados por ley:
             </p>
+            <ul className="privacy-policy__list">
+              <li className="privacy-policy__item">
+                <strong>Acceso:</strong> Consultar qué información personal poseemos sobre vos.
+              </li>
+              <li className="privacy-policy__item">
+                <strong>Rectificación:</strong> Solicitar la corrección de datos inexactos o desactualizados.
+              </li>
+              <li className="privacy-policy__item">
+                <strong>Cancelación:</strong> Solicitar la eliminación de tus datos de nuestros registros cuando ya no sean necesarios para la finalidad recopilada.
+              </li>
+              <li className="privacy-policy__item">
+                <strong>Oposición:</strong> Oponerte al tratamiento de tus datos para fines no autorizados.
+              </li>
+            </ul>
           </section>
 
           <section className="privacy-policy__section">
             <h2 className="privacy-policy__section-title">
               <CheckCircle size={22} className="privacy-policy__icon-bullet" />
-              5. Modificaciones a esta Política
+              5. Enlaces a Sitios de Terceros
             </h2>
             <p className="privacy-policy__text">
-              Nos reservamos el derecho de actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestros servicios o en las normativas legales. Te recomendamos revisar esta página regularmente para mantenerte informado.
+              Nuestro sitio incluye enlaces directos a nuestras cuentas oficiales en Instagram, Facebook y TikTok. Al ser redirigido a estas plataformas, su interacción se regirá por las políticas de privacidad de cada red social correspondiente.
             </p>
           </section>
 
@@ -146,10 +158,10 @@ export default function PrivacyPolicy() {
           <div className="privacy-policy__contact-box">
             <div className="privacy-policy__contact-header">
               <Mail size={24} />
-              <h3>¿Tenés alguna pregunta sobre tus datos?</h3>
+              <h3>¿Querés ejercer tus Derechos ARCO?</h3>
             </div>
             <p className="privacy-policy__contact-text">
-              Si necesitás consultar, actualizar o solicitar la eliminación de tu información, escribinos por cualquiera de nuestras redes o canales de atención al cliente en <strong>Bela & Luna Petshop</strong>.
+              Si querés acceder, corregir o eliminar tus datos personales almacenados en <strong>Bela & Luna Petshop Nicaragua</strong>, contactanos a través de cualquiera de nuestros canales oficiales de atención al cliente.
             </p>
           </div>
 
