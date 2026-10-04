@@ -16,7 +16,7 @@ export default function Footer() {
         <nav className="footer__links">
           <Link to="/privacy" className="footer__link">Privacidad</Link>
           <Link to="/terms" className="footer__link">Términos</Link>
-          <a href="#" className="footer__link">Envíos</a>
+          <Link to="/shipping" className="footer__link">Envíos</Link>
           <a href="#" className="footer__link">Devoluciones</a>
         </nav>
 

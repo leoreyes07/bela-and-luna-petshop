@@ -15,6 +15,7 @@ import PetBowls from './views/PetBowls';
 import Others from './views/Others';
 import PrivacyPolicy from './views/PrivacyPolicy';
 import TermsAndConditions from './views/TermsAndConditions';
+import ShippingPolicy from './views/ShippingPolicy';
 
 export default function App() {
   const location = useLocation();
@@ -43,6 +44,8 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/shipping" element={<ShippingPolicy />} />
+          <Route path="/envios" element={<ShippingPolicy />} />
         </Routes>
       </div>
 
