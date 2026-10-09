@@ -10,6 +10,7 @@ import './Checkout.css';
 export default function Checkout() {
   const { cart, totalPrice, removeFromCart } = useCart();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<'delivery' | 'transfer' | 'whatsapp'>('delivery');
   const shipping = 0;
   const finalTotal = totalPrice + shipping;
 
@@ -90,40 +91,66 @@ export default function Checkout() {
             <div className="checkout-card">
               <div className="checkout-card__header">
                 <div className="checkout-card__icon-wrapper checkout-card__icon-wrapper--secondary">
-                  <CreditCard size={20} />
+                  <ShieldCheck size={20} />
                 </div>
-                <h2 className="checkout-card__title">Método de Pago</h2>
+                <h2 className="checkout-card__title">Método de Pago (Demo Segura)</h2>
               </div>
+              
               <div className="payment-methods">
+                <div className="payment-methods__disclaimer" style={{ 
+                  backgroundColor: 'rgba(0, 204, 153, 0.12)', 
+                  borderLeft: '4px solid var(--color-green)',
+                  padding: '16px', 
+                  borderRadius: '16px', 
+                  marginBottom: '24px',
+                  fontSize: '0.9rem',
+                  color: '#006644',
+                  lineHeight: '1.5'
+                }}>
+                  <strong>🔒 Compra Segura sin Riesgos:</strong> Bela & Luna opera en modo simulación de frontend. Por tu seguridad, <strong>NUNCA</strong> solicitamos ni guardamos números de tarjetas de crédito o datos bancarios en esta plataforma.
+                </div>
+
                 <div className="payment-methods__chips">
-                  <button className="payment-methods__chip payment-methods__chip--active">
-                    <CreditCard size={18} /> Card
+                  <button 
+                    type="button"
+                    onClick={() => setPaymentMethod('delivery')} 
+                    className={`payment-methods__chip ${paymentMethod === 'delivery' ? 'payment-methods__chip--active' : ''}`}
+                  >
+                    <Truck size={18} /> Pago contra entrega
                   </button>
-                  <button className="payment-methods__chip">
-                    <Wallet size={18} /> PayPal
+                  <button 
+                    type="button"
+                    onClick={() => setPaymentMethod('transfer')} 
+                    className={`payment-methods__chip ${paymentMethod === 'transfer' ? 'payment-methods__chip--active' : ''}`}
+                  >
+                    <Wallet size={18} /> Transferencia Bancaria
                   </button>
-                  <button className="payment-methods__chip">
-                    <Send size={18} /> Pay
+                  <button 
+                    type="button"
+                    onClick={() => setPaymentMethod('whatsapp')} 
+                    className={`payment-methods__chip ${paymentMethod === 'whatsapp' ? 'payment-methods__chip--active' : ''}`}
+                  >
+                    <Send size={18} /> Pedido por WhatsApp
                   </button>
                 </div>
-                <div className="checkout-form">
-                  <div className="checkout-form__group">
-                    <label className="checkout-form__label">Número de Tarjeta</label>
-                    <div className="checkout-form__input-wrapper">
-                      <input className="checkout-form__input" placeholder="•••• •••• •••• ••••" type="text" />
-                      <CreditCard className="checkout-form__input-icon" size={20} />
-                    </div>
-                  </div>
-                  <div className="checkout-form__row">
-                    <div className="checkout-form__group">
-                      <label className="checkout-form__label">Fecha de Vencimiento</label>
-                      <input className="checkout-form__input" placeholder="MM/YY" type="text" />
-                    </div>
-                    <div className="checkout-form__group">
-                      <label className="checkout-form__label">CVV</label>
-                      <input className="checkout-form__input" placeholder="•••" type="text" />
-                    </div>
-                  </div>
+
+                <div className="payment-methods__info" style={{ 
+                  backgroundColor: '#ffffff', 
+                  padding: '20px', 
+                  borderRadius: '16px',
+                  border: '1px solid rgba(121, 4, 56, 0.1)',
+                  fontSize: '0.95rem',
+                  color: 'rgba(121, 4, 56, 0.85)'
+                }}>
+                  {paymentMethod === 'delivery' && (
+                    <p>📦 <strong>Pago contra entrega:</strong> Abonás en efectivo o con tarjeta al recibir tus productos en la puerta de tu casa.</p>
+                  )}
+                  {paymentMethod === 'transfer' && (
+                    <p>🏦 <strong>Transferencia Bancaria:</strong> Al confirmar el pedido te enviaremos los datos de la cuenta para que transfieras sin compartir datos sensibles.</p>
+                  )}
+                  {paymentMethod === 'whatsapp' && (
+                    <p>💬 <strong>Pedido por WhatsApp:</strong> Un asesor de Bela & Luna coordinará el detalle de tu entrega y pago directamente por chat.</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -131,8 +158,9 @@ export default function Checkout() {
             <button 
               onClick={handleCompletePurchase}
               className="button button--primary checkout__submit"
+              disabled={cart.length === 0}
             >
-              <Lock size={24} /> Completar Compra
+              <Lock size={24} /> Confirmar Pedido Seguro
             </button>
           </section>
 
