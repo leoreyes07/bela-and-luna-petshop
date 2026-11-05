@@ -155,6 +155,21 @@
   box-shadow: 0 0 0 2px var(--color-green);
 }
 
+.checkout-form__input--error {
+  box-shadow: 0 0 0 2px var(--color-pink);
+}
+
+.checkout-form__input--error:focus {
+  box-shadow: 0 0 0 2px var(--color-pink);
+}
+
+.checkout-form__error {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-pink);
+  padding-left: 12px;
+}
+
 .checkout-form__input-wrapper {
   position: relative;
 }
