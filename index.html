@@ -7,12 +7,20 @@
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <title>Bela & Luna Petshop</title>
+  <title>Bela &amp; Luna Petshop</title>
 </head>
 
 <body>
   <div id="root"></div>
-
-  <script type="module" src="./src/main.tsx"></script>
-
+  <!-- Dev redirect: if the URL contains the sub‑folder, go to root for Vite dev server -->
+  <script>
+    const devPrefix = '/bela-and-luna-petshop/';
+    if (location.pathname.startsWith(devPrefix)) {
+      // keep querystring & hash, but drop the subfolder
+      const newPath = '/' + location.search + location.hash;
+      location.replace(newPath);
+    }
+  </script>
+<script type="module" src="./src/main.tsx"></script>
+</body>
 </html>
