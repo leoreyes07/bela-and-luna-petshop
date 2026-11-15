@@ -10,7 +10,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "lint:security": "eslint src"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
@@ -24,11 +25,16 @@
     "vite": "^6.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^22.14.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-security": "^4.2.1",
     "gh-pages": "^6.3.0",
+    "globals": "^17.14.0",
     "sharp": "^0.34.5",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
+    "typescript-eslint": "^8.72.2",
     "vite": "^6.2.0"
   }
 }
