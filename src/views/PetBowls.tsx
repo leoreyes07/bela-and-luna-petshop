@@ -1,14 +1,13 @@
 import React from 'react';
 import { useCart } from '../contexts/CartContext';
-import { ShoppingCart } from 'lucide-react';
 import PetBowlCard from '../components/PetBowlCard';
-import { BOWLS, Product } from '../constants';
+import { BOWLS } from '../constants';
 import './PetBowls.css';
 
 
 
 export default function PetBowls() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   return (
     <main className="pet-bowls">
       <section className="pet-bowls-hero">

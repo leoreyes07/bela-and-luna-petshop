@@ -8,7 +8,7 @@ import heroDogs from '../assets/hero-dogs.webp';
 import './Home.css';
 
 export default function Home() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   const navigate = useNavigate();
   return (
     <main className="home">

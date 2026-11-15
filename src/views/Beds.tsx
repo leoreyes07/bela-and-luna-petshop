@@ -1,14 +1,13 @@
 import React from 'react';
 import { useCart } from '../contexts/CartContext';
-import { ShoppingCart } from 'lucide-react';
 import BedCard from '../components/BedCard';
-import { BEDS, Product } from '../constants';
+import { BEDS } from '../constants';
 import './Beds.css';
 
 
 
 export default function Beds() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   return (
     <main className="beds">
       <section className="beds-hero">

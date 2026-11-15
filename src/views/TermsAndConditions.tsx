@@ -1,4 +1,4 @@
-import { FileText, Scale, DollarSign, Truck, ShieldAlert, CheckCircle, ArrowLeft, Building2 } from 'lucide-react';
+import { Scale, DollarSign, Truck, ShieldAlert, CheckCircle, ArrowLeft, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './TermsAndConditions.css';
 

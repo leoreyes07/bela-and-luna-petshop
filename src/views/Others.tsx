@@ -1,14 +1,13 @@
 import React from 'react';
 import { useCart } from '../contexts/CartContext';
-import { ShoppingCart } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
-import { OTHERS, Product } from '../constants';
+import { OTHERS } from '../constants';
 import './Others.css';
 
 
 
 export default function Others() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   return (
     <main className="others">
       <section className="others-hero">

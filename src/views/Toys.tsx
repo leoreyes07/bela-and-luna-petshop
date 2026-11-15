@@ -1,13 +1,12 @@
 import { useCart } from '../contexts/CartContext';
-import { ShoppingCart } from 'lucide-react';
 import ToyCard from '../components/ToyCard';
-import { TOYS, Product } from '../constants';
+import { TOYS } from '../constants';
 import './Toys.css';
 
 
 
 export default function Toys() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   return (
     <main className="toys">
       <section className="toys-hero">

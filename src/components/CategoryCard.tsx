@@ -21,8 +21,7 @@ const CUSTOM_ICONS: Record<string, React.FC<{ size?: number; color?: string }>> 
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ name, iconName, onClick }) => {
   const CustomIcon = CUSTOM_ICONS[iconName];
-  // @ts-ignore - Dynamic icon access
-  const LucideIcon = Icons[iconName] || Icons.HelpCircle;
+  const LucideIcon = (Icons as unknown as Record<string, React.ElementType>)[iconName] || Icons.HelpCircle;
 
   const getColorData = () => {
     switch (name.toLowerCase()) {

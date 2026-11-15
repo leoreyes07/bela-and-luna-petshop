@@ -1,5 +1,4 @@
-import { Truck, CreditCard, Wallet, Send, Lock, Gift, ShieldCheck, RotateCcw, Package } from 'lucide-react';
-import { Product, CartItemType } from '../constants';
+import { Truck, Wallet, Send, Lock, Gift, ShieldCheck, RotateCcw, Package } from 'lucide-react';
 import CartItem from '../components/CartItem';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { useCart } from '../contexts/CartContext';

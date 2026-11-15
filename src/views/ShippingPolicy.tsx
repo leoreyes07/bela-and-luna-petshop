@@ -1,4 +1,4 @@
-import { MapPin, Truck, Bus, PackageCheck, Clock, ShieldCheck, ArrowLeft, DollarSign, HelpCircle, CheckCircle2 } from 'lucide-react';
+import { MapPin, Truck, Bus, PackageCheck, Clock, ShieldCheck, ArrowLeft, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './ShippingPolicy.css';
 

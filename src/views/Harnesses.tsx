@@ -1,13 +1,12 @@
 import { useCart } from '../contexts/CartContext';
-import { ShoppingCart } from 'lucide-react';
 import TacticalHarnessCard from '../components/TacticalHarnessCard';
-import { TACTICAL_HARNESSES, Product } from '../constants';
+import { TACTICAL_HARNESSES } from '../constants';
 import './Harnesses.css';
 
 
 
 export default function Harnesses() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   return (
     <main className="harnesses">
       <section className="harnesses-hero">

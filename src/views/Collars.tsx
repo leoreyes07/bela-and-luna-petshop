@@ -1,13 +1,12 @@
 import { useCart } from '../contexts/CartContext';
-import { ShoppingCart } from 'lucide-react';
 import CollarCard from '../components/CollarCard';
-import { COLLARS, Product } from '../constants';
+import { COLLARS } from '../constants';
 import './Collars.css';
 
 
 
 export default function Collars() {
-  const { cartCount, totalPrice, addToCart } = useCart();
+  const { addToCart } = useCart();
   return (
     <main className="collars">
       <section className="collars-hero">
